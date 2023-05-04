@@ -1,49 +1,49 @@
-sciencedirect.com
-springer.com
-scopus.com
-elsevier.com
-journals.sagepub.com
-ieee.org
-emerald.com
-theiet.org
-oup.com
-iop.org
-spiedigitallibrary.org
-jstor.org
-dl.acm.org
-ieeexplore.ieee.org
-ams.org
-academic.oup.com
-journals.acm.org
-journals.aps.org
-annualreviews.org
-pubs.acs.org
-journal.chestnet.org
-journals.ametsoc.org
-onlinelibrary.wiley.com
-pubs.aic.ca
-acpjournals.org
-meridian.allenpress.com
-elibrary.asabe.org
-pubs.nutrition.org
-ajnr.org
-ajtmh.org
-degruyter.com
-biomedcentral.com
-www.cambridge.org
-clinicaltrials.gov 
-pubs.cif-ifc.org
-taylorfrancis.com
-www.publish.csiro.au
-cshprotocols.cshlp.org
-www.cshlpress.com
-go.drugbank.com 
-ems-ph.org
-engineeringvillage.com
-search.ebscohost.com
-rdfybk.com
-siam.org
-spiedigitallibrary.org
-royalsociety.org
-projecteuclid.org
-pnas.org
+DOMAIN-SUFFIX, sciencedirect.com
+DOMAIN-SUFFIX, springer.com
+DOMAIN-SUFFIX, scopus.com
+DOMAIN-SUFFIX, elsevier.com
+DOMAIN-SUFFIX, journals.sagepub.com
+DOMAIN-SUFFIX, ieee.org
+DOMAIN-SUFFIX, emerald.com
+DOMAIN-SUFFIX, theiet.org
+DOMAIN-SUFFIX, oup.com
+DOMAIN-SUFFIX, iop.org
+DOMAIN-SUFFIX, spiedigitallibrary.org
+DOMAIN-SUFFIX, jstor.org
+DOMAIN, dl.acm.org
+DOMAIN, ieeexplore.ieee.org
+DOMAIN-SUFFIX, ams.org
+DOMAIN, academic.oup.com
+DOMAIN, journals.acm.org
+DOMAIN, journals.aps.org
+DOMAIN-SUFFIX, annualreviews.org
+DOMAIN, pubs.acs.org
+DOMAIN, journal.chestnet.org
+DOMAIN, journals.ametsoc.org
+DOMAIN-SUFFIX, onlinelibrary.wiley.com
+DOMAIN, pubs.aic.ca
+DOMAIN, acpjournals.org
+DOMAIN, meridian.allenpress.com
+DOMAIN, elibrary.asabe.org
+DOMAIN, pubs.nutrition.org
+DOMAIN-SUFFIX, ajnr.org
+DOMAIN-SUFFIX, ajtmh.org
+DOMAIN-SUFFIX, degruyter.com
+DOMAIN-SUFFIX, biomedcentral.com
+DOMAIN, www.cambridge.org
+DOMAIN-SUFFIX, clinicaltrials.gov 
+DOMAIN, pubs.cif-ifc.org
+DOMAIN-SUFFIX, taylorfrancis.com
+DOMAIN, www.publish.csiro.au
+DOMAIN, cshprotocols.cshlp.org
+DOMAIN, www.cshlpress.com
+DOMAIN, go.drugbank.com
+DOMAIN-SUFFIX, ems-ph.org
+DOMAIN-SUFFIX, engineeringvillage.com
+DOMAIN, search.ebscohost.com
+DOMAIN-SUFFIX, rdfybk.com
+DOMAIN-SUFFIX, siam.org
+DOMAIN-SUFFIX, spiedigitallibrary.org
+DOMAIN-SUFFIX, royalsociety.org
+DOMAIN-SUFFIX, projecteuclid.org
+DOMAIN-SUFFIX, pnas.org
