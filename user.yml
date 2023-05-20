@@ -1,3 +1,5 @@
+port: 7890
+socks-port: 7891
 tproxy-port: 7893
 allow-lan: true
 bind-address: '*'
@@ -15,7 +17,7 @@ profile:
 # This section is optional. When not present, the DNS server will be disabled.
 dns:
   enable: true
-  listen: 0.0.0.0:1053
+  listen: :53
   ipv6: true # when the false, response to AAAA questions will be empty
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
@@ -38,7 +40,7 @@ dns:
     - 'cdn.jsdelivr.net'
     - 'babyrouter.dynv6.net'
     - '+.nintendo.net'
-    - 'v1.mk'
+    - '+.v1.mk'
     - 'dynv6.com'
     - 'babygeda.asuscomm.com'
   
