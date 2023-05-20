@@ -22,9 +22,9 @@ dns:
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
   # Specify IP addresses only
-  # default-nameserver:
-  #   - 211.138.180.2
-  #   - 211.138.180.3
+  default-nameserver:
+    - 211.138.180.2
+    - 211.138.180.3
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   # use-hosts: true # lookup hosts and return IP record
@@ -48,7 +48,7 @@ dns:
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-    - 8.8.8.8
-    - 211.138.180.2
+    - tls://dns.alidns.com
+    - tls://dot.pub
+    - https://doh.opendns.com/dns-query
+
