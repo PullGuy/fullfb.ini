@@ -24,7 +24,8 @@ dns:
   # Specify IP addresses only
   default-nameserver:
     - 211.138.180.2
-    - 211.138.180.3
+    - 223.5.5.5
+    - 119.29.29.29
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   # use-hosts: true # lookup hosts and return IP record
@@ -37,19 +38,17 @@ dns:
   fake-ip-filter:
     - '*.lan'
     - 'babygeda.myds.me'
-    - 'cdn.jsdelivr.net'
     - 'babyrouter.dynv6.net'
-    - '+.nintendo.net'
     - '+.v1.mk'
     - 'dynv6.com'
     - 'babygeda.asuscomm.com'
-    - '+.mi.com'
   
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
   nameserver:
-    - tls://dns.alidns.com
-    - tls://dot.pub
+    - https://dns.alidns.com/dns-query
+    - https://1.12.12.12/dns-query
     - https://doh.opendns.com/dns-query
+    - https://doh.apad.pro/dns-query
 
