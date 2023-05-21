@@ -42,6 +42,7 @@ dns:
     - '+.v1.mk'
     - 'dynv6.com'
     - 'babygeda.asuscomm.com'
+    - '+.mi.com'
   
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
