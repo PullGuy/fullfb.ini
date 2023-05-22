@@ -1,70 +1,70 @@
-DOMAIN-SUFFIX, sciencedirect.com
-DOMAIN-SUFFIX, springer.com
-DOMAIN-SUFFIX, scopus.com
-DOMAIN-SUFFIX, elsevier.com
-DOMAIN-SUFFIX, sagepub.com
-DOMAIN-SUFFIX, ieee.org
-DOMAIN-SUFFIX, emerald.com
-DOMAIN-SUFFIX, theiet.org
-DOMAIN-SUFFIX, oup.com
-DOMAIN-SUFFIX, iop.org
-DOMAIN-SUFFIX, spiedigitallibrary.org
-DOMAIN-SUFFIX, jstor.org
-DOMAIN-SUFFIX, acm.org
-DOMAIN-SUFFIX, ieee.org
-DOMAIN-SUFFIX, ams.org
-DOMAIN-SUFFIX, oup.com
-DOMAIN-SUFFIX, acm.org
-DOMAIN-SUFFIX, aps.org
-DOMAIN-SUFFIX, linggle.com
-DOMAIN-SUFFIX, annualreviews.org
-DOMAIN-SUFFIX, acs.org
-DOMAIN-SUFFIX, chestnet.org
-DOMAIN-SUFFIX, ametsoc.org
-DOMAIN-SUFFIX, wiley.com
-DOMAIN-SUFFIX, aic.ca
-DOMAIN-SUFFIX, jisc.ac.uk
-DOMAIN-SUFFIX, acpjournals.org
-DOMAIN-SUFFIX, allenpress.com
-DOMAIN-SUFFIX, asabe.org
-DOMAIN-SUFFIX, nutrition.org
-DOMAIN-SUFFIX, highwirepress.com
-DOMAIN-SUFFIX, ajnr.org
-DOMAIN-SUFFIX, ajtmh.org
-DOMAIN-SUFFIX, degruyter.com
-DOMAIN-SUFFIX, biomedcentral.com
-DOMAIN-SUFFIX, cambridge.org
-DOMAIN-SUFFIX, clinicaltrials.gov 
-DOMAIN-SUFFIX, cif-ifc.org
-DOMAIN-SUFFIX, taylorfrancis.com
-DOMAIN-SUFFIX, csiro.au
-DOMAIN-SUFFIX, cshlp.org
-DOMAIN-SUFFIX, cshlpress.com
-DOMAIN-SUFFIX, drugbank.com 
-DOMAIN-SUFFIX, oalib.com
-DOMAIN-SUFFIX, semanticscholar.org
-DOMAIN-SUFFIX, ems-ph.org
-DOMAIN-SUFFIX, netspeak.org
-DOMAIN-SUFFIX, researchgate.net
-DOMAIN-SUFFIX, engineeringvillage.com
-DOMAIN-SUFFIX, ebscohost.com
-DOMAIN-SUFFIX, reciteworks.com
-DOMAIN-SUFFIX, rdfybk.com
-DOMAIN-SUFFIX, siam.org
-DOMAIN-SUFFIX, connectedpapers.com
-DOMAIN-SUFFIX, findarticles.com
-DOMAIN-SUFFIX, spiedigitallibrary.org
-DOMAIN-SUFFIX, royalsociety.org
-DOMAIN-SUFFIX, projecteuclid.org
-DOMAIN-SUFFIX, pnas.org
-DOMAIN-SUFFIX, plagiarisma.net
-DOMAIN-SUFFIX, openstax.org
-DOMAIN-SUFFIX, intechopen.com
-DOMAIN-SUFFIX, zotero.org
-DOMAIN-SUFFIX, webofscience.com
-DOMAIN-SUFFIX, clarivate.com
-DOMAIN-SUFFIX, webofknowledge.com
-DOMAIN-SUFFIX, scimagojr.com
-DOMAIN-SUFFIX, deepdyve.com
-DOMAIN-SUFFIX, stackexchange.com
-DOMAIN, pubmed.ncbi.nlm.nih.gov
+DOMAIN-SUFFIX,sciencedirect.com
+DOMAIN-SUFFIX,springer.com
+DOMAIN-SUFFIX,scopus.com
+DOMAIN-SUFFIX,elsevier.com
+DOMAIN-SUFFIX,sagepub.com
+DOMAIN-SUFFIX,ieee.org
+DOMAIN-SUFFIX,emerald.com
+DOMAIN-SUFFIX,theiet.org
+DOMAIN-SUFFIX,oup.com
+DOMAIN-SUFFIX,iop.org
+DOMAIN-SUFFIX,spiedigitallibrary.org
+DOMAIN-SUFFIX,jstor.org
+DOMAIN-SUFFIX,acm.org
+DOMAIN-SUFFIX,ieee.org
+DOMAIN-SUFFIX,ams.org
+DOMAIN-SUFFIX,oup.com
+DOMAIN-SUFFIX,acm.org
+DOMAIN-SUFFIX,aps.org
+DOMAIN-SUFFIX,linggle.com
+DOMAIN-SUFFIX,annualreviews.org
+DOMAIN-SUFFIX,acs.org
+DOMAIN-SUFFIX,chestnet.org
+DOMAIN-SUFFIX,ametsoc.org
+DOMAIN-SUFFIX,wiley.com
+DOMAIN-SUFFIX,aic.ca
+DOMAIN-SUFFIX,jisc.ac.uk
+DOMAIN-SUFFIX,acpjournals.org
+DOMAIN-SUFFIX,allenpress.com
+DOMAIN-SUFFIX,asabe.org
+DOMAIN-SUFFIX,nutrition.org
+DOMAIN-SUFFIX,highwirepress.com
+DOMAIN-SUFFIX,ajnr.org
+DOMAIN-SUFFIX,ajtmh.org
+DOMAIN-SUFFIX,degruyter.com
+DOMAIN-SUFFIX,biomedcentral.com
+DOMAIN-SUFFIX,cambridge.org
+DOMAIN-SUFFIX,clinicaltrials.gov 
+DOMAIN-SUFFIX,cif-ifc.org
+DOMAIN-SUFFIX,taylorfrancis.com
+DOMAIN-SUFFIX,csiro.au
+DOMAIN-SUFFIX,cshlp.org
+DOMAIN-SUFFIX,cshlpress.com
+DOMAIN-SUFFIX,drugbank.com 
+DOMAIN-SUFFIX,oalib.com
+DOMAIN-SUFFIX,semanticscholar.org
+DOMAIN-SUFFIX,ems-ph.org
+DOMAIN-SUFFIX,netspeak.org
+DOMAIN-SUFFIX,researchgate.net
+DOMAIN-SUFFIX,engineeringvillage.com
+DOMAIN-SUFFIX,ebscohost.com
+DOMAIN-SUFFIX,reciteworks.com
+DOMAIN-SUFFIX,rdfybk.com
+DOMAIN-SUFFIX,siam.org
+DOMAIN-SUFFIX,connectedpapers.com
+DOMAIN-SUFFIX,findarticles.com
+DOMAIN-SUFFIX,spiedigitallibrary.org
+DOMAIN-SUFFIX,royalsociety.org
+DOMAIN-SUFFIX,projecteuclid.org
+DOMAIN-SUFFIX,pnas.org
+DOMAIN-SUFFIX,plagiarisma.net
+DOMAIN-SUFFIX,openstax.org
+DOMAIN-SUFFIX,intechopen.com
+DOMAIN-SUFFIX,zotero.org
+DOMAIN-SUFFIX,webofscience.com
+DOMAIN-SUFFIX,clarivate.com
+DOMAIN-SUFFIX,webofknowledge.com
+DOMAIN-SUFFIX,scimagojr.com
+DOMAIN-SUFFIX,deepdyve.com
+DOMAIN-SUFFIX,stackexchange.com
+DOMAIN,pubmed.ncbi.nlm.nih.gov
