@@ -35,14 +35,14 @@ dns:
   # Hostnames in this list will not be resolved with fake IPs
   # i.e. questions to these domain names will always be answered with their
   # real IP addresses
-  fake-ip-filter:
-    - '*.lan'
-    - 'babygeda.myds.me'
-    - 'babyrouter.dynv6.net'
-    - '+.v1.mk'
-    - 'dynv6.com'
-    - 'babygeda.asuscomm.com'
-    - '+.mi.com'
+#   fake-ip-filter:
+#     - '*.lan'
+#     - 'babygeda.myds.me'
+#     - 'babyrouter.dynv6.net'
+#     - '+.v1.mk'
+#     - 'dynv6.com'
+#     - 'babygeda.asuscomm.com'
+#     - '+.mi.com'
   
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
