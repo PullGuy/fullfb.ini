@@ -67,4 +67,4 @@ DOMAIN-SUFFIX,webofknowledge.com
 DOMAIN-SUFFIX,scimagojr.com
 DOMAIN-SUFFIX,deepdyve.com
 DOMAIN-SUFFIX,stackexchange.com
-DOMAIN,pubmed.ncbi.nlm.nih.gov
+DOMAIN-SUFFIX,nih.gov
