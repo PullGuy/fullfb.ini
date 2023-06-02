@@ -1,72 +1,71 @@
-payload:
-  - '+.265.com'
-  - '+.2mdn-cn.net'
-  - '+.2mdn.net'
-  - '+.admob.com'
-  - '+.admob-cn.com'
-  - '+.ai.ytimg.com'
-  - '+.app-measurement-cn.com'
-  - '+.app-measurement.com'
-  - '+.apps5.oingo.com'
-  - '+.googleflights.net'
-  - '+.gvt2.com'
-  - '+.google.com'
-  - '+.googlers.com'
-  - '+.gstatic.com'
-  - '+.googleads.com'
-  - '+.googleapis.com'
-  - '+.clickserve.cc-dt.com'
-  - '+.dartsearch.net'
-  - '+.cn.widevine.com'
-  - '+.pki.goog'
-  - '+.dartsearch-cn.net'
-  - '+.qatp1.net'
-  - '+.qcpp1.net'
-  - '+.qpdp1.net'
-  - '+.doubleclick-cn.net'
-  - '+.doubleclick.net'
-  - '+.crashlytics.com'
-  - '+.gcpnode.com'
-  - '+.gonglchuangl.net'
-  - '+.gongyichuangyi.net'
-  - '+.google-analytics-cn.com'
-  - '+.google-analytics.com'
-  - '+.googleadservices-cn.com'
-  - '+.googleadservices.com'
-  - '+.googleanalytics.com'
-  - '+.googleapis-cn.com'
-  - '+.googleapps-cn.com'
-  - '+.googleflights-cn.net'
-  - '+.googleoptimize-cn.com'
-  - '+.googleoptimize.com'
-  - '+.googleplex.com'
-  - '+.googlesyndication-cn.com'
-  - '+.googlesyndication.com'
-  - '+.googletagmanager-cn.com'
-  - '+.googletagmanager.com'
-  - '+.googletagservices-cn.com'
-  - '+.googletagservices.com'
-  - '+.googletraveladservices-cn.com'
-  - '+.googletraveladservices.com'
-  - '+.googlevads-cn.com'
-  - '+.gstatic-cn.com'
-  - '+.gtm.oasisfeng.com'
-  - '+.gvt1-cn.com'
-  - '+.gvt2-cn.com'
-  - '+.play.1ucrs.com'
-  - '+.floonet.goog'
-  - '+.recaptcha.net'
-  - '+.redirector.bdn.dev'
-  - '+.youtubeeducation.com'
-  - '+.gvt1.com'
-  - '+.xn--ngstr-lra8j.com' 
-  - '+.service.urchin.com'
-  - '+.support.1ucrs.com'
-  - '+.chromium.org'
-  - '+.corp.goog'
-  - '+.destinationurl.com'
-  - '+.pxcc.com'
-  - '+.xn--9kr7l.com'
-  - '+.xn--flw351e.com'
-  - '+.xn--9trs65b.com'
-  - '+.xn--ggle-55da.com'
+DOMAIN-SUFFIX,265.com
+DOMAIN-SUFFIX,2mdn-cn.net
+DOMAIN-SUFFIX,2mdn.net
+DOMAIN-SUFFIX,admob.com
+DOMAIN-SUFFIX,admob-cn.com
+DOMAIN-SUFFIX,ai.ytimg.com
+DOMAIN-SUFFIX,app-measurement-cn.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,apps5.oingo.com
+DOMAIN-SUFFIX,googleflights.net
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,googlers.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,googleads.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,clickserve.cc-dt.com
+DOMAIN-SUFFIX,dartsearch.net
+DOMAIN-SUFFIX,cn.widevine.com
+DOMAIN-SUFFIX,pki.goog
+DOMAIN-SUFFIX,dartsearch-cn.net
+DOMAIN-SUFFIX,qatp1.net
+DOMAIN-SUFFIX,qcpp1.net
+DOMAIN-SUFFIX,qpdp1.net
+DOMAIN-SUFFIX,doubleclick-cn.net
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,gcpnode.com
+DOMAIN-SUFFIX,gonglchuangl.net
+DOMAIN-SUFFIX,gongyichuangyi.net
+DOMAIN-SUFFIX,google-analytics-cn.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,googleadservices-cn.com
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googleanalytics.com
+DOMAIN-SUFFIX,googleapis-cn.com
+DOMAIN-SUFFIX,googleapps-cn.com
+DOMAIN-SUFFIX,googleflights-cn.net
+DOMAIN-SUFFIX,googleoptimize-cn.com
+DOMAIN-SUFFIX,googleoptimize.com
+DOMAIN-SUFFIX,googleplex.com
+DOMAIN-SUFFIX,googlesyndication-cn.com
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googletagmanager-cn.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googletagservices-cn.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,googletraveladservices-cn.com
+DOMAIN-SUFFIX,googletraveladservices.com
+DOMAIN-SUFFIX,googlevads-cn.com
+DOMAIN-SUFFIX,gstatic-cn.com
+DOMAIN-SUFFIX,gtm.oasisfeng.com
+DOMAIN-SUFFIX,gvt1-cn.com
+DOMAIN-SUFFIX,gvt2-cn.com
+DOMAIN-SUFFIX,play.1ucrs.com
+DOMAIN-SUFFIX,floonet.goog
+DOMAIN-SUFFIX,recaptcha.net
+DOMAIN-SUFFIX,redirector.bdn.dev
+DOMAIN-SUFFIX,youtubeeducation.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,xn--ngstr-lra8j.com 
+DOMAIN-SUFFIX,service.urchin.com
+DOMAIN-SUFFIX,support.1ucrs.com
+DOMAIN-SUFFIX,chromium.org
+DOMAIN-SUFFIX,corp.goog
+DOMAIN-SUFFIX,destinationurl.com
+DOMAIN-SUFFIX,pxcc.com
+DOMAIN-SUFFIX,xn--9kr7l.com
+DOMAIN-SUFFIX,xn--flw351e.com
+DOMAIN-SUFFIX,xn--9trs65b.com
+DOMAIN-SUFFIX,xn--ggle-55da.com
