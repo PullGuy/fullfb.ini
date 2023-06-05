@@ -22,7 +22,8 @@ dns:
 
   # These nameservers are used to resolve the DNS nameserver hostnames below.
   # Specify IP addresses only
-  default-nameserver:
+#   default-nameserver:
+  nameserver:
     - 211.138.180.2
     - 223.5.5.5
     - 119.29.29.29
@@ -47,9 +48,9 @@ dns:
   # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
   # All DNS questions are sent directly to the nameserver, without proxies
   # involved. Clash answers the DNS question with the first result gathered.
-  nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://1.12.12.12/dns-query
-    - https://doh.opendns.com/dns-query
-    - https://doh.apad.pro/dns-query
+#   nameserver:
+#     - https://dns.alidns.com/dns-query
+#     - https://1.12.12.12/dns-query
+#     - https://doh.opendns.com/dns-query
+#     - https://doh.apad.pro/dns-query
 
