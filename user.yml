@@ -8,7 +8,6 @@ log-level: info
 ipv6: true
 external-controller: :9999
 external-ui: ui
-interface-name: en0
 profile:
   store-selected: true
   store-fake-ip: true
