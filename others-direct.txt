@@ -6,5 +6,5 @@ dynv6.com
 div.show
 dynv6.net
 edu.cn
-DOMAIN-KEYWORD,ubuntu
+keyword:ubuntu
 
