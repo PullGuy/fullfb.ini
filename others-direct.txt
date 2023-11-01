@@ -5,7 +5,6 @@ lencr.org
 dynv6.com
 div.show
 dynv6.net
-keyword:xsus
 edu.cn
-keyword:ubuntu
+DOMAIN-KEYWORD,ubuntu
 
