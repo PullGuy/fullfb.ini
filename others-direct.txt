@@ -7,4 +7,5 @@ div.show
 dynv6.net
 keyword:xsus
 edu.cn
+keyword:ubuntu
 
