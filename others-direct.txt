@@ -7,4 +7,5 @@ div.show
 dynv6.net
 edu.cn
 keyword:ubuntu
+location.services.mozilla.com
 
