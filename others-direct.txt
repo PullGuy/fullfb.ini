@@ -8,4 +8,6 @@ dynv6.net
 edu.cn
 keyword:ubuntu
 location.services.mozilla.com
+api.met.no
+aviationweather.gov
 
