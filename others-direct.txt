@@ -10,4 +10,5 @@ keyword:ubuntu
 location.services.mozilla.com
 api.met.no
 aviationweather.gov
+discourse-cdn.com
 
