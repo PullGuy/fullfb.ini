@@ -1,4 +1,3 @@
-DOMAIN-SUFFIX,v1.mk
 DOMAIN-SUFFIX,jsdelivr.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,lencr.org
