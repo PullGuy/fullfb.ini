@@ -5,7 +5,7 @@ DOMAIN-SUFFIX,lencr.org
 DOMAIN-SUFFIX,dynv6.com
 DOMAIN-SUFFIX,div.show
 DOMAIN-SUFFIX,dynv6.net
-KEYWORD:ubuntu
+DOMAIN-KEYWORD:ubuntu
 DOMAIN-SUFFIX,location.services.mozilla.com
 DOMAIN-SUFFIX,api.met.no
 DOMAIN-SUFFIX,aviationweather.gov
