@@ -1,11 +1,10 @@
-v1.mk
-jsdelivr.com
-ghproxy.com
+DOMAIN-SUFFIX,v1.mk
+DOMAIN-SUFFIX,jsdelivr.com
+DOMAIN-SUFFIX,cloudflare.com
 lencr.org
 dynv6.com
 div.show
 dynv6.net
-edu.cn
 keyword:ubuntu
 location.services.mozilla.com
 api.met.no
