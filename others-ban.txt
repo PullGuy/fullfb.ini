@@ -1,1 +1,3 @@
-officeplus.cn”、“pcmanager.microsoft.com”、“pcmanager.officeplus.cn
+DOMAIN,officeplus.cn
+DOMAIN,pcmanager.microsoft.com
+DOMAIN,pcmanager.officeplus.cn
