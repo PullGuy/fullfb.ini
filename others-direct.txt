@@ -11,3 +11,4 @@ DOMAIN-SUFFIX,aviationweather.gov
 DOMAIN-SUFFIX,discourse-cdn.com
 DOMAIN-SUFFIX,syncthing.net
 DOMAIN-KEYWORD,scholaread
+DOMAIN-KEYWORD,quickconnect
