@@ -1,3 +1,3 @@
-DOMAIN,officeplus.cn
-DOMAIN,pcmanager.microsoft.com
-DOMAIN,pcmanager.officeplus.cn
+DOMAIN-SUUFIX,pcmanager.microsoft.com
+DOMAIN-SUUFIX,pcmanager.officeplus.cn
+DOMAIN-SUUFIX,officeplus.cn
