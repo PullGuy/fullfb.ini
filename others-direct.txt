@@ -12,4 +12,3 @@ DOMAIN-SUFFIX,discourse-cdn.com
 DOMAIN-SUFFIX,syncthing.net
 DOMAIN-KEYWORD,scholaread
 DOMAIN-KEYWORD,quickconnect
-IP-CIDR,220.130.197.210,no-resolve
