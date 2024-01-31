@@ -12,3 +12,5 @@ DOMAIN-SUFFIX,discourse-cdn.com
 DOMAIN-SUFFIX,syncthing.net
 DOMAIN-KEYWORD,scholaread
 DOMAIN-KEYWORD,quickconnect
+DOMAIN-KEYWORD,hdfans
+DOMAIN-KEYWORD,hdatmos
