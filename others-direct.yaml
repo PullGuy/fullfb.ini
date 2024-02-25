@@ -5,6 +5,8 @@ payload:
 - DOMAIN-SUFFIX,dynv6.com
 - DOMAIN-SUFFIX,div.show
 - DOMAIN-SUFFIX,dynv6.net
+- DOMAIN-SUFFIX,asuscomm.com
+- DOMAIN-SUFFIX,myds.me
 - DOMAIN-KEYWORD,ubuntu
 - DOMAIN-SUFFIX,location.services.mozilla.com
 - DOMAIN-SUFFIX,api.met.no
