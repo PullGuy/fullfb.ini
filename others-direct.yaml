@@ -1,6 +1,5 @@
 payload:
 - DOMAIN-KEYWORD,jsdelivr
-- DOMAIN-KEYWORD,cloudflare
 - DOMAIN-SUFFIX,lencr.org
 - DOMAIN-SUFFIX,dynv6.com
 - DOMAIN-SUFFIX,div.show
