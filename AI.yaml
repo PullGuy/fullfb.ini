@@ -4,6 +4,6 @@ payload:
 - DOMAIN-SUFFIX,opendns.com
 - DOMAIN-SUFFIX,bing.com
 - DOMAIN-SUFFIX,civitai.com
-- DOMAIN-SUFFIX,bard.google.com
+- DOMAIN-SUFFIX,gemini.google.com
 - DOMAIN-SUFFIX,statsigapi.net
 - DOMAIN-SUFFIX,openaigptguide.com
