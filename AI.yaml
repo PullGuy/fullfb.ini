@@ -5,6 +5,7 @@ payload:
 - DOMAIN-SUFFIX,azureedge.net  
 - DOMAIN-SUFFIX,akamaized.net
 - DOMAIN-SUFFIX,ai.com
+- DOMAIN-SUFFIX,ai
 - DOMAIN-SUFFIX,auth0.openai.com
 
 - DOMAIN-SUFFIX,bing.com
