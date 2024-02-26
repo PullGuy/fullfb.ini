@@ -19,6 +19,7 @@ payload:
 - DOMAIN-SUFFIX,smtp
 - DOMAIN-SUFFIX,synology.com
 - DOMAIN-SUFFIX,codeium.com
+- DOMAIN-SUFFIX,zotero.org
 - DOMAIN-KEYWORD,aria2
 - PROCESS-NAME,aria2c.exe
 - PROCESS-NAME,fdm.exe
