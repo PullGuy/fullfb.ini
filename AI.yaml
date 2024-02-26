@@ -1,7 +1,52 @@
 payload:
-- DOMAIN-SUFFIX,openai.nooc.ink
+- DOMAIN,cdn.auth0.com
+- DOMAIN-SUFFIX,anthropic.com
+- DOMAIN-SUFFIX,azurefd.net 
+- DOMAIN-SUFFIX,azureedge.net  
+- DOMAIN-SUFFIX,akamaized.net
+- DOMAIN-SUFFIX,ai.com
+
 - DOMAIN-SUFFIX,bing.com
+
+- DOMAIN-SUFFIX,cdn.cloudflare.net 
+- DOMAIN-SUFFIX,challenges.cloudflare.com 
+- DOMAIN-SUFFIX,cloudflareinsights.com
+- DOMAIN-SUFFIX,compute-pipe.com 
 - DOMAIN-SUFFIX,civitai.com
+
+- DOMAIN-SUFFIX,doubleclick.net
+
+- DOMAIN-SUFFIX,edgecompute.app
+
+- DOMAIN-SUFFIX,f7tk.com
+- DOMAIN-SUFFIX,featuregates.org 
+
+- DOMAIN-SUFFIX,gstatic.com 
+- DOMAIN-SUFFIX,gpt3sandbox.com
 - DOMAIN-SUFFIX,gemini.google.com
-- DOMAIN-SUFFIX,statsigapi.net
+
+- DOMAIN-SUFFIX,hcaptcha.com
+
+- DOMAIN-SUFFIX,intercomcdn.com 
+- DOMAIN-SUFFIX,identrust.com 
+- DOMAIN-SUFFIX,intercom.io 
+
+- DOMAIN-SUFFIX,msftconnecttest.com
+
+- DOMAIN-SUFFIX,openai.com
+- DOMAIN-SUFFIX,openaicom.imgix.net
 - DOMAIN-SUFFIX,openaigptguide.com
+- DOMAIN-SUFFIX,openai.nooc.ink
+
+- DOMAIN-SUFFIX,pki.goog
+- DOMAIN-SUFFIX,poe.com
+
+- DOMAIN-SUFFIX,recaptcha.net 
+
+- DOMAIN-SUFFIX,statsigapi.net
+- DOMAIN-SUFFIX,stripe.com
+- DOMAIN-SUFFIX,stripe.network
+- DOMAIN-SUFFIX,sentry.io
+
+- DOMAIN-SUFFIX,vimeo.com
+- DOMAIN-SUFFIX,vimeocdn.com
