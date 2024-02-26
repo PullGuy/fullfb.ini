@@ -4,31 +4,14 @@ payload:
 - DOMAIN-SUFFIX,azureedge.net  
 - DOMAIN-SUFFIX,akamaized.net
 - DOMAIN-SUFFIX,ai.com
+- DOMAIN-SUFFIX,ai
 - DOMAIN-SUFFIX,auth0.openai.com
 
-- DOMAIN-SUFFIX,bing.com
-- DOMAIN-SUFFIX,bing123.com
-- DOMAIN-SUFFIX,bing135.com
-- DOMAIN-SUFFIX,bing4.com
-- DOMAIN-SUFFIX,bing.com.bo
-- DOMAIN-SUFFIX,bing.com.co
-- DOMAIN-SUFFIX,bing.com.cy
-- DOMAIN-SUFFIX,bing.com.gt
-- DOMAIN-SUFFIX,bing.jp
-- DOMAIN-SUFFIX,bing.cn
-- DOMAIN-SUFFIX,bing.net
-- DOMAIN-SUFFIX,bingapis.com
-- DOMAIN-SUFFIX,bingforbusiness.com
-
-# - DOMAIN-SUFFIX,cdn.cloudflare.net 
-# - DOMAIN-SUFFIX,challenges.cloudflare.com 
-# - DOMAIN-SUFFIX,cloudflareinsights.com
-
-- DOMAIN-SUFFIX,cdn.auth0.com
+- DOMAIN-SUFFIX,copilot.microsoft.com
 - DOMAIN-SUFFIX,compute-pipe.com 
 - DOMAIN-SUFFIX,civitai.com
-- DOMAIN-KEYWORD,claude
 
+- DOMAIN-SUFFIX,cdn.auth0.com
 
 - DOMAIN-SUFFIX,doubleclick.net
 
@@ -66,6 +49,7 @@ payload:
 - DOMAIN-SUFFIX,stripe.com
 - DOMAIN-SUFFIX,stripe.network
 - DOMAIN-SUFFIX,sentry.io
+- DOMAIN-SUFFIX,sydney.bing.com
 
 - DOMAIN-SUFFIX,vimeo.com
 - DOMAIN-SUFFIX,vimeocdn.com
