@@ -1,5 +1,12 @@
+#########################################
+# 部分内容补充自 https://ruleset.skk.moe
+# GitHub: https://github.com/SukkaW/Surge
+#########################################
 payload:
 - DOMAIN-SUFFIX,cdn.auth0.com
+- DOMAIN,ai.google.dev
+- DOMAIN,alkalicore-pa.clients6.google.com
+- DOMAIN,alkalimakersuite-pa.clients6.google.com
 - DOMAIN-SUFFIX,anthropic.com
 - DOMAIN-SUFFIX,azurefd.net 
 - DOMAIN-SUFFIX,azureedge.net  
@@ -31,6 +38,8 @@ payload:
 
 
 - DOMAIN-SUFFIX,doubleclick.net
+- DOMAIN-SUFFIX,deepmind.com
+- DOMAIN-SUFFIX,deepmind.google
 
 - DOMAIN-SUFFIX,edgecompute.app
 
@@ -40,6 +49,9 @@ payload:
 - DOMAIN-SUFFIX,gstatic.com 
 - DOMAIN-SUFFIX,gpt3sandbox.com
 - DOMAIN-SUFFIX,gemini.google.com
+- DOMAIN-SUFFIX,generativelanguage.googleapis.com
+- DOMAIN-SUFFIX,geller-pa.googleapis.com
+- DOMAIN-SUFFIX,generativeai.google
 
 - DOMAIN-SUFFIX,hcaptcha.com
 - DOMAIN-SUFFIX,heypi.com
@@ -50,7 +62,10 @@ payload:
 
 - DOMAIN-SUFFIX,msftconnecttest.com
 - DOMAIN-SUFFIX,msxiaobing.com
+- DOMAIN-SUFFIX,makersuite.google.com
 
+- DOMAIN-SUFFIX,oaistatic.com
+- DOMAIN-SUFFIX,oaiusercontent.com
 - DOMAIN-SUFFIX,openai.com
 - DOMAIN-SUFFIX,openaicom.imgix.net
 - DOMAIN-SUFFIX,openaigptguide.com
@@ -59,6 +74,7 @@ payload:
 
 - DOMAIN-SUFFIX,pki.goog
 - DOMAIN-SUFFIX,poe.com
+- DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 
 - DOMAIN-SUFFIX,recaptcha.net 
 
