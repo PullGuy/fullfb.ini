@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+       ".pcmanager.microsoft.com",
+        ".pcmanager.officeplus.cn",
+        ".officeplus.cn",
+        ".scorecardresearch.com",
+        ".nelreports.net"
+      ]
+    }
+  ]
+}
