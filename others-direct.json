@@ -46,7 +46,10 @@
         ".smtp",
         ".synology.com",
         ".codeium.com",
-        ".zotero.org"
+        ".zotero.org",
+        ".synology.com",
+        ".dyndns.org",
+        ".synocommunity.com"
       ]
     }
   ]
