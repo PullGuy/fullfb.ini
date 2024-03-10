@@ -21,6 +21,8 @@ payload:
 - DOMAIN-SUFFIX,codeium.com
 - DOMAIN-SUFFIX,zotero.org
 - DOMAIN-SUFFIX,anti-ad.net
+- DOMAIN-SUFFIX,adtidy.org
+- DOMAIN-SUFFIX,cloudflareclient.com
 - DOMAIN-KEYWORD,aria2
 - PROCESS-NAME,aria2c.exe
 - PROCESS-NAME,fdm.exe
