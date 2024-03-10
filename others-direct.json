@@ -2,9 +2,6 @@
   "version": 1,
   "rules": [
     {
-      "ip_cidr": [
-        "220.130.197.210/32"
-      ],
       "domain_keyword": [
         "jsdelivr",
         "ubuntu",
