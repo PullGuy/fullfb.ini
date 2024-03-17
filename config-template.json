@@ -34,7 +34,7 @@
                 "address": "fakeip"
             },
             {
-                "tag": "block",
+                "tag": "ban",
                 "address": "rcode://success"
             }
         ],
@@ -45,7 +45,7 @@
                     "ads",
                     "others-ban"
                 ],
-                "server": "block"
+                "server": "ban"
             },
             {
                 "outbound": "any",
@@ -112,6 +112,10 @@
         {
             "tag": "dns-out",
             "type": "dns"
+        },
+        {
+            "type": "block",
+            "tag": "block"
         },
         {
             "tag": "♻️ 自动选择",
