@@ -16,6 +16,7 @@
         ".dynv6.com",
         ".div.show",
         ".dynv6.net",
+        ".dyndns.org",
         ".asuscomm.com",
         ".myds.me",
         ".location.services.mozilla.com",
@@ -30,7 +31,12 @@
         ".codeium.com",
         ".zotero.org",
         ".dyndns.org",
-        ".synocommunity.com"
+        ".synocommunity.com",
+        ".adtidy.org",
+        ".wiki.metacubex.one",
+        ".cloudflareclient.com",
+        ".getproxy.bzpl.tech",
+        ".diygod.dev"
       ]
     }
   ]
