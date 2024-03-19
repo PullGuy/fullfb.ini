@@ -630,363 +630,369 @@
         }
     ],
     "route": {
-        "auto_detect_interface": true,
-        "final": "🐟 漏网之鱼",
+    "auto_detect_interface": true,
+    "final": "🐟 漏网之鱼",
+    "rules": [
+      {
+        "type": "logical",
+        "mode": "or",
         "rules": [
-            {
-                "protocol": "dns",
-                "outbound": "dns-out"
-            },
-            {
-                "port": 53,
-                "outbound": "dns-out"
-            },
-            {
-                "clash_mode": "direct",
-                "outbound": "DIRECT"
-            },
-            {
-                "clash_mode": "global",
-                "outbound": "GLOBAL"
-            },
-            {
-                "rule_set": [
-                    "ai",
-                    "notion",
-                    "openai"
-                ],
-                "outbound": "🤖 人工智障"
-            },
-            {
-                "rule_set": "github",
-                "outbound": "👬 GayHub"
-            },
-            {
-                "rule_set": "scholar",
-                "outbound": "👨🏻‍🔬 科研狗"
-            },
-            {
-                "rule_set": [
-                    "telegram",
-                    "telegramip"
-                ],
-                "outbound": "📲 电报消息"
-            },
-            {
-                "rule_set": "youtube",
-                "outbound": "🎥 YouTube"
-            },
-            {
-                "rule_set": "spotify",
-                "outbound": "🎵 Spotify"
-            },
-            {
-                "rule_set": "biliintl",
-                "outbound": "📺 B站海外"
-            },
-            {
-                "rule_set": "netflix",
-                "outbound": "🎥 NETFLIX"
-            },
-            {
-                "rule_set": "disney",
-                "outbound": "🎥 Disney"
-            },
-            {
-                "rule_set": "porn",
-                "outbound": "🔞 18禁"
-            },
-            {
-                "rule_set": [
-                    "private",
-                    "others-direct",
-                    "category-public-tracker",
-                    "tracker",
-                    "microsoft-cn",
-                    "apple-cn",
-                    "google-cn",
-                    "games-cn"
-                ],
-                "outbound": "DIRECT"
-            },
-            {
-                "rule_set": "microsoft",
-                "outbound": "Ⓜ️ 微软服务"
-            },
-            {
-                "rule_set": "apple",
-                "outbound": "🍎 苹果服务"
-            },
-            {
-                "rule_set": "google",
-                "outbound": "📢 Google服务"
-            },
-            {
-                "rule_set": "games",
-                "outbound": "🎮 肥宅快乐"
-            },
-            {
-                "rule_set": "fuckgfw",
-                "outbound": "🖕 FuckGFW"
-            },
-            {
-                "rule_set": "cn",
-                "outbound": "DIRECT"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "rule_set": "geosite-geolocation-!cn"
-                    },
-                    {
-                        "rule_set": "cnip"
-                    }
-                ],
-                "outbound": "DIRECT"
-            },
-            {
-                "ip_is_private": true,
-                "outbound": "DIRECT"
-            },
-            {
-                "rule_set": "cnip",
-                "outbound": "DIRECT"
-            }
+          {
+            "protocol": "dns",
+          },
+          {
+            "port": 53
+          }
         ],
+        "outbound": "dns-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "DIRECT"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "DIRECT"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
         "rule_set": [
-            {
-                "tag": "private",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "fakeipfilter",
-                "type": "remote",
-                "format": "source",
-                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/fakeipfilter.json",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "others-direct",
-                "type": "remote",
-                "format": "source",
-                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-direct.json",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "category-public-tracker",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-public-tracker.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "tracker",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tracker.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "category-ads-all",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "ads",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box/ads.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "others-ban",
-                "type": "remote",
-                "format": "source",
-                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-ban.json",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "notion",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/notion.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "openai",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/openai.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "ai",
-                "type": "remote",
-                "format": "source",
-                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/AI.json",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "github",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/github.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "scholar",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-scholar-!cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "telegram",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/telegram.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "telegramip",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/telegram.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "microsoft-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/microsoft@cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "microsoft",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/microsoft.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "apple-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/apple-cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "apple",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/apple.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "google-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google-cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "google",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "youtube",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/youtube.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "spotify",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "biliintl",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/biliintl.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "netflix",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "disney",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/disney.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "games-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-games@cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "games",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-games@!cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "porn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-porn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "fuckgfw",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/gfw.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "cnip",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "geosite-geolocation-!cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
-                "download_detour": "DIRECT"
-            }
-        ]
-    }
+          "ai",
+          "notion",
+          "openai"
+        ],
+        "outbound": "🤖 人工智障"
+      },
+      {
+        "rule_set": "github",
+        "outbound": "👬 GayHub"
+      },
+      {
+        "rule_set": "scholar",
+        "outbound": "👨🏻‍🔬 科研狗"
+      },
+      {
+        "rule_set": [
+          "telegram",
+          "telegramip"
+        ],
+        "outbound": "📲 电报消息"
+      },
+      {
+        "rule_set": "youtube",
+        "outbound": "🎥 YouTube"
+      },
+      {
+        "rule_set": "spotify",
+        "outbound": "🎵 Spotify"
+      },
+      {
+        "rule_set": "biliintl",
+        "outbound": "📺 B站海外"
+      },
+      {
+        "rule_set": "netflix",
+        "outbound": "🎥 NETFLIX"
+      },
+      {
+        "rule_set": "disney",
+        "outbound": "🎥 Disney"
+      },
+      {
+        "rule_set": "porn",
+        "outbound": "🔞 18禁"
+      },
+      {
+        "rule_set": [
+          "private",
+          "others-direct",
+          "category-public-tracker",
+          "tracker",
+          "microsoft-cn",
+          "apple-cn",
+          "google-cn",
+          "games-cn"
+        ],
+        "outbound": "DIRECT"
+      },
+      {
+        "rule_set": "microsoft",
+        "outbound": "Ⓜ️ 微软服务"
+      },
+      {
+        "rule_set": "apple",
+        "outbound": "🍎 苹果服务"
+      },
+      {
+        "rule_set": "google",
+        "outbound": "📢 Google服务"
+      },
+      {
+        "rule_set": "games",
+        "outbound": "🎮 肥宅快乐"
+      },
+      {
+        "rule_set": "fuckgfw",
+        "outbound": "🖕 FuckGFW"
+      },
+      {
+        "rule_set": "cn",
+        "outbound": "DIRECT"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geosite-geolocation-!cn"
+          },
+          {
+            "rule_set": "cnip"
+          }
+        ],
+        "outbound": "DIRECT"
+      },
+      
+      {
+        "rule_set": "cnip",
+        "outbound": "DIRECT"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "private",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "fakeipfilter",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/fakeipfilter.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "others-direct",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-direct.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "category-public-tracker",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-public-tracker.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "tracker",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tracker.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ads",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box/ads.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "others-ban",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-ban.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "notion",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/notion.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "openai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/openai.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ai",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/AI.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "github",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/github.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "scholar",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-scholar-!cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/telegram.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "telegramip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/telegram.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "microsoft-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/microsoft@cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "microsoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/microsoft.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/apple-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/apple.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "google-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/google.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/youtube.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "spotify",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/spotify.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "biliintl",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/biliintl.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/netflix.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "disney",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/disney.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "games-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-games@cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "games",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-games@!cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "porn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-porn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "fuckgfw",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/gfw.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "cnip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+        "download_detour": "DIRECT"
+      }
+    ]
+  }
 }
