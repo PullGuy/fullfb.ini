@@ -52,7 +52,11 @@
                 "server": "local"
             },
             {
-                "rule_set": "fakeipfilter",
+                "rule_set": [
+                    "fakeipfilter",
+                    "others-direct",
+                    "cn"
+                ],
                 "server": "local"
             },
             {
