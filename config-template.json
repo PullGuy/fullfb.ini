@@ -46,7 +46,7 @@
                 "rule_set": [
                     "cn",
                     "others-direct"
-                ]
+                ],
                 "server": "local"
             },
             {
