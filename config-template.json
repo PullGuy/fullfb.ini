@@ -629,138 +629,136 @@
             ]
         }
     ],
-    "route": {
-    "auto_detect_interface": true,
-    "final": "🐟 漏网之鱼",
-    "rules": [
-      {
-        "type": "logical",
-        "mode": "or",
+    "route": {    
         "rules": [
           {
-            "protocol": "dns"
+            "type": "logical",
+            "mode": "or",
+            "rules": [
+              {
+                "protocol": "dns"
+              },
+              {
+                "port": 53
+              }
+            ],
+            "outbound": "dns-out"
           },
           {
-            "port": 53
-          }
-        ],
-        "outbound": "dns-out"
-      },
-      {
-        "ip_is_private": true,
-        "outbound": "DIRECT"
-      },
-      {
-        "clash_mode": "direct",
-        "outbound": "DIRECT"
-      },
-      {
-        "clash_mode": "global",
-        "outbound": "GLOBAL"
-      },
-      {
-        "rule_set": [
-          "ai",
-          "notion",
-          "openai"
-        ],
-        "outbound": "🤖 人工智障"
-      },
-      {
-        "rule_set": "github",
-        "outbound": "👬 GayHub"
-      },
-      {
-        "rule_set": "scholar",
-        "outbound": "👨🏻‍🔬 科研狗"
-      },
-      {
-        "rule_set": [
-          "telegram",
-          "telegramip"
-        ],
-        "outbound": "📲 电报消息"
-      },
-      {
-        "rule_set": "youtube",
-        "outbound": "🎥 YouTube"
-      },
-      {
-        "rule_set": "spotify",
-        "outbound": "🎵 Spotify"
-      },
-      {
-        "rule_set": "biliintl",
-        "outbound": "📺 B站海外"
-      },
-      {
-        "rule_set": "netflix",
-        "outbound": "🎥 NETFLIX"
-      },
-      {
-        "rule_set": "disney",
-        "outbound": "🎥 Disney"
-      },
-      {
-        "rule_set": "porn",
-        "outbound": "🔞 18禁"
-      },
-      {
-        "rule_set": [
-          "private",
-          "others-direct",
-          "category-public-tracker",
-          "tracker",
-          "microsoft-cn",
-          "apple-cn",
-          "google-cn",
-          "games-cn"
-        ],
-        "outbound": "DIRECT"
-      },
-      {
-        "rule_set": "microsoft",
-        "outbound": "Ⓜ️ 微软服务"
-      },
-      {
-        "rule_set": "apple",
-        "outbound": "🍎 苹果服务"
-      },
-      {
-        "rule_set": "google",
-        "outbound": "📢 Google服务"
-      },
-      {
-        "rule_set": "games",
-        "outbound": "🎮 肥宅快乐"
-      },
-      {
-        "rule_set": "fuckgfw",
-        "outbound": "🖕 FuckGFW"
-      },
-      {
-        "rule_set": "cn",
-        "outbound": "DIRECT"
-      },
-      {
-        "type": "logical",
-        "mode": "and",
-        "rules": [
-          {
-            "rule_set": "geosite-geolocation-!cn"
+            "ip_is_private": true,
+            "outbound": "DIRECT"
           },
           {
-            "rule_set": "cnip"
+            "clash_mode": "direct",
+            "outbound": "DIRECT"
+          },
+          {
+            "clash_mode": "global",
+            "outbound": "GLOBAL"
+          },
+          {
+            "rule_set": [
+              "ai",
+              "notion",
+              "openai"
+            ],
+            "outbound": "🤖 人工智障"
+          },
+          {
+            "rule_set": "github",
+            "outbound": "👬 GayHub"
+          },
+          {
+            "rule_set": "scholar",
+            "outbound": "👨🏻‍🔬 科研狗"
+          },
+          {
+            "rule_set": [
+              "telegram",
+              "telegramip"
+            ],
+            "outbound": "📲 电报消息"
+          },
+          {
+            "rule_set": "youtube",
+            "outbound": "🎥 YouTube"
+          },
+          {
+            "rule_set": "spotify",
+            "outbound": "🎵 Spotify"
+          },
+          {
+            "rule_set": "biliintl",
+            "outbound": "📺 B站海外"
+          },
+          {
+            "rule_set": "netflix",
+            "outbound": "🎥 NETFLIX"
+          },
+          {
+            "rule_set": "disney",
+            "outbound": "🎥 Disney"
+          },
+          {
+            "rule_set": "porn",
+            "outbound": "🔞 18禁"
+          },
+          {
+            "rule_set": [
+              "private",
+              "others-direct",
+              "category-public-tracker",
+              "tracker",
+              "microsoft-cn",
+              "apple-cn",
+              "google-cn",
+              "games-cn"
+            ],
+            "outbound": "DIRECT"
+          },
+          {
+            "rule_set": "microsoft",
+            "outbound": "Ⓜ️ 微软服务"
+          },
+          {
+            "rule_set": "apple",
+            "outbound": "🍎 苹果服务"
+          },
+          {
+            "rule_set": "google",
+            "outbound": "📢 Google服务"
+          },
+          {
+            "rule_set": "games",
+            "outbound": "🎮 肥宅快乐"
+          },
+          {
+            "rule_set": "fuckgfw",
+            "outbound": "🖕 FuckGFW"
+          },
+          {
+            "rule_set": "cn",
+            "outbound": "DIRECT"
+          },
+          {
+            "type": "logical",
+            "mode": "and",
+            "rules": [
+              {
+                "rule_set": "geosite-geolocation-!cn"
+              },
+              {
+                "rule_set": "cnip"
+              }
+            ],
+            "outbound": "DIRECT"
+          },
+          
+          {
+            "rule_set": "cnip",
+            "outbound": "DIRECT"
           }
         ],
-        "outbound": "DIRECT"
-      },
-      
-      {
-        "rule_set": "cnip",
-        "outbound": "DIRECT"
-      }
-    ],
     "rule_set": [
       {
         "tag": "private",
@@ -992,7 +990,9 @@
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
         "download_detour": "DIRECT"
-      }
+      },
+    "auto_detect_interface": false,
+    "final": "🐟 漏网之鱼",
     ]
   }
 }
