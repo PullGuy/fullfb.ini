@@ -141,6 +141,10 @@
             "tag": "DIRECT",
             "type": "direct"
         },
+        { 
+            "type": "block",
+            "tag": "REJECT" 
+        },
         {
             "tag": "Ⓜ️ 微软服务",
             "type": "selector",
