@@ -43,7 +43,10 @@
                 "server": "google"
             },
             {
-                "rule_set": "cn",
+                "rule_set": [
+                    "cn",
+                    "others-direct"
+                ]
                 "server": "local"
             },
             {
