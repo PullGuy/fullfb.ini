@@ -64,7 +64,7 @@
                 "client_subnet": "114.114.114.114"
             }
         ],
-        "final", "local"
+        "final": "local"
     },
     "inbounds": [
         {
