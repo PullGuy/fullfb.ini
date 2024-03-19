@@ -715,7 +715,6 @@
                     "others-direct",
                     "category-public-tracker",
                     "tracker",
-                    "private-tracker",
                     "microsoft-cn",
                     "apple-cn",
                     "google-cn",
@@ -803,13 +802,6 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tracker.srs",
-                "download_detour": "DIRECT"
-            },
-            {
-                "tag": "private-tracker",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/bm7/PrivateTracker.srs",
                 "download_detour": "DIRECT"
             },
             {
