@@ -638,7 +638,7 @@
         "mode": "or",
         "rules": [
           {
-            "protocol": "dns",
+            "protocol": "dns"
           },
           {
             "port": 53
