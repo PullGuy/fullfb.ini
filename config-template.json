@@ -61,9 +61,10 @@
                     }
                 ],
                 "server": "google",
-                "client_subnet": "220.185.184.17"
+                "client_subnet": "114.114.114.114"
             }
-        ]
+        ],
+        "final", "local"
     },
     "inbounds": [
         {
