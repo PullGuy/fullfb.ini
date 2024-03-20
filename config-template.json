@@ -19,51 +19,51 @@
     },
     "dns": {
         "servers": [
-          {
-            "tag": "google",
-            "address": "tls://8.8.8.8"
-          },
-          {
-            "tag": "local",
-            "address": "https://223.5.5.5/dns-query",
-            "detour": "DIRECT"
-          }
+            {
+                "tag": "google",
+                "address": "tls://8.8.8.8"
+            },
+            {
+                "tag": "local",
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "DIRECT"
+            }
         ],
         "rules": [
-          {
-            "outbound": "any",
-            "server": "local"
-          },
-          {
-            "clash_mode": "Direct",
-            "server": "local"
-          },
-          {
-            "clash_mode": "Global",
-            "server": "google"
-          },
-          {
-            "rule_set": [
-              "cn"
-            ],
-            "server": "local"
-          },
-          {
-            "type": "logical",
-            "mode": "and",
-            "rules": [
-              {
-                "rule_set": "geosite-geolocation-!cn"
-              },
-              {
-                "rule_set": "cnip"
-              }
-            ],
-            "server": "google",
-            "client_subnet": "114.114.114.114" 
-          }
+            {
+                "outbound": "any",
+                "server": "local"
+            },
+            {
+                "clash_mode": "Direct",
+                "server": "local"
+            },
+            {
+                "clash_mode": "Global",
+                "server": "google"
+            },
+            {
+                "rule_set": [
+                    "cn"
+                ],
+                "server": "local"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geosite-geolocation-!cn"
+                    },
+                    {
+                        "rule_set": "cnip"
+                    }
+                ],
+                "server": "google",
+                "client_subnet": "114.114.114.114"
+            }
         ]
-      },
+    },
     "inbounds": [
         {
             "tag": "mixed-in",
@@ -143,9 +143,9 @@
             "tag": "DIRECT",
             "type": "direct"
         },
-        { 
+        {
             "type": "block",
-            "tag": "REJECT" 
+            "tag": "REJECT"
         },
         {
             "tag": "Ⓜ️ 微软服务",
@@ -663,6 +663,23 @@
                 "outbound": "GLOBAL"
             },
             {
+                "type": "logical",
+                "mode": "or",
+                "rules": [
+                    {
+                        "port": 853
+                    },
+                    {
+                        "network": "udp",
+                        "port": 443
+                    },
+                    {
+                        "protocol": "stun"
+                    }
+                ],
+                "outbound": "block"
+            },
+            {
                 "rule_set": [
                     "ai",
                     "notion",
@@ -743,24 +760,10 @@
                 "outbound": "🖕 FuckGFW"
             },
             {
-                "rule_set": "cn",
-                "outbound": "DIRECT"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "rule_set": "geosite-geolocation-!cn"
-                    },
-                    {
-                        "rule_set": "cnip"
-                    }
+                "rule_set": [
+                    "cn",
+                    "cnip"
                 ],
-                "outbound": "DIRECT"
-            },
-            {
-                "rule_set": "cnip",
                 "outbound": "DIRECT"
             }
         ],
