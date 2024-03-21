@@ -10,67 +10,85 @@
             "secret": "123456",
             "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
             "external_ui_download_detour": "DIRECT",
-            "default_mode": "Enhanced"
-        },
-        "cache_file": {
-            "enabled": true,
-            "store_rdrc": true
+            "default_mode": "Rule"        
         }
     },
     "dns": {
-        "servers": [
-            {
-                "tag": "google",
-                "address": "tls://8.8.8.8"
-            },
-            {
-                "tag": "local",
-                "address": "https://223.5.5.5/dns-query",
-                "detour": "DIRECT"
-            }
+    "servers": [
+      {
+        "tag": "local",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "DIRECT"
+      },
+      {
+        "tag": "ddns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "DIRECT",
+        "strategy": "ipv6_only"
+      },
+      {
+        "tag": "remote",
+        "address": "fakeip"
+      },
+      {
+        "tag": "dns_success",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "rule_set": [
+          "category-ads-all",
+          "ads",
+          "others-ban"
         ],
-        "rules": [
-            {
-                "outbound": "any",
-                "server": "local"
-            },
-            {
-                "clash_mode": "Direct",
-                "server": "local"
-            },
-            {
-                "clash_mode": "Global",
-                "server": "google"
-            },
-            {
-                "rule_set": [
-                    "cn"
-                ],
-                "server": "local"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "rule_set": "geosite-geolocation-!cn"
-                    },
-                    {
-                        "rule_set": "cnip"
-                    }
-                ],
-                "server": "google",
-                "client_subnet": "114.114.114.114"
-            }
-        ]
-    },
+        "server": "dns_success"
+      },
+      {
+        "outbound": "any",
+        "server": "local"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "remote",
+        "rewrite_ttl": 0
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "local"
+      },      
+      {
+        "domain_suffix": [
+          ".myds.me",
+          ".dynv6.net",
+          ".asuscomm.com"
+        ],
+        "server": "ddns"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote",
+        "rewrite_ttl": 0
+      }
+    ],
+    "final": "local",
+    "independent_cache": true,
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    }
+  },
     "inbounds": [
         {
             "tag": "mixed-in",
             "type": "mixed",
             "listen": "::",
             "listen_port": 7890,
-            "sniff": true
+            "sniff": false
         },
         {
             "tag": "dns-in",
@@ -83,16 +101,16 @@
             "type": "redirect",
             "listen": "::",
             "listen_port": 7892,
-            "sniff": true,
-            "sniff_override_destination": true
+            "sniff": false,
+            "sniff_override_destination": false
         },
         {
             "tag": "tproxy-in",
             "type": "tproxy",
             "listen": "::",
             "listen_port": 7893,
-            "sniff": true,
-            "sniff_override_destination": true
+            "sniff": false,
+            "sniff_override_destination": false
         }
     ],
     "outbounds": [
