@@ -125,7 +125,7 @@
         {
             "tag": "♻️ 自动选择",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -445,7 +445,7 @@
         {
             "tag": "🇭🇰 香港节点",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -469,7 +469,7 @@
         {
             "tag": "🇹🇼 台湾节点",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -493,7 +493,7 @@
         {
             "tag": "🇯🇵 日本节点",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -517,7 +517,7 @@
         {
             "tag": "🇰🇷 韩国节点",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -541,7 +541,7 @@
         {
             "tag": "🇸🇬 新加坡节点",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -565,7 +565,7 @@
         {
             "tag": "🇺🇸 美国节点",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -589,7 +589,7 @@
         {
             "tag": "🪅 其他自动",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
@@ -622,7 +622,7 @@
         {
             "tag": "🤖 智障自动",
             "type": "urltest",
-            "tolerance": 50,
+            "tolerance": 30,
             "outbounds": [
                 "{all}"
             ],
