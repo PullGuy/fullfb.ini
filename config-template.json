@@ -677,11 +677,11 @@
                 "outbound": "DIRECT"
             },
             {
-                "clash_mode": "direct",
+                "clash_mode": "Direct",
                 "outbound": "DIRECT"
             },
             {
-                "clash_mode": "global",
+                "clash_mode": "Global",
                 "outbound": "GLOBAL"
             },
             {
