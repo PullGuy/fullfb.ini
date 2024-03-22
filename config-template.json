@@ -669,6 +669,10 @@
                 "outbound": "dns-out"
             },
             {
+                "inbound": "dns-in",
+                "outbound": "dns-out"
+            },
+            {
                 "ip_is_private": true,
                 "outbound": "DIRECT"
             },
