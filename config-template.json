@@ -6,82 +6,89 @@
     "experimental": {
         "clash_api": {
             "external_controller": "0.0.0.0:9999",
-            "external_ui": "/jffs/ShellCrash/ui",
+            "external_ui": "ui",
             "secret": "123456",
             "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-            "external_ui_download_detour": "DIRECT",
-            "default_mode": "Rule"        
+            "external_ui_download_detour": "DIRECT"
+        },
+        "cache_file": {
+            "enabled": true,
+            "store_fakeip": false,
+            "store_rdrc": true
         }
     },
     "dns": {
-    "servers": [
-      {
-        "tag": "local",
-        "address": "https://223.5.5.5/dns-query",
-        "detour": "DIRECT"
-      },
-      {
-        "tag": "ddns",
-        "address": "https://223.5.5.5/dns-query",
-        "detour": "DIRECT",
-        "strategy": "ipv6_only"
-      },
-      {
-        "tag": "remote",
-        "address": "fakeip"
-      },
-      {
-        "tag": "dns_success",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "rule_set": [
-          "category-ads-all",
-          "ads",
-          "others-ban"
+        "fakeip": {
+            "enabled": true,
+            "inet4_range": "198.18.0.0/15",
+            "inet6_range": "fc00::/18"
+        },
+        "servers": [
+            {
+                "tag": "local",
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "DIRECT"
+            },
+            {
+                "tag": "ddns",
+                "address": "https://223.6.6.6/dns-query",
+                "detour": "DIRECT",
+                "strategy": "ipv6_only"
+            },
+            {
+                "tag": "remote",
+                "address": "fakeip"
+            },
+            {
+                "tag": "ban",
+                "address": "rcode://success"
+            }
         ],
-        "server": "dns_success"
-      },
-      {
-        "outbound": "any",
-        "server": "local"
-      },
-      {
-        "clash_mode": "Global",
-        "server": "remote",
-        "rewrite_ttl": 0
-      },
-      {
-        "clash_mode": "Direct",
-        "server": "local"
-      },      
-      {
-        "domain_suffix": [
-          ".myds.me",
-          ".dynv6.net",
-          ".asuscomm.com"
+        "rules": [
+            {
+                "rule_set": [
+                    "category-ads-all",
+                    "ads",
+                    "others-ban"
+                ],
+                "server": "ban"
+            },
+            {
+                "outbound": "any",
+                "server": "local"
+            },
+            {
+                "clash_mode": "Direct",
+                "server": "local"
+            },
+            {
+                "domain_suffix": [
+                    ".myds.me",
+                    ".dynv6.net",
+                    ".asuscomm.com"
+                ],
+                "server": "ddns"
+            },
+            {
+                "clash_mode": "Global",
+                "server": "remote",
+                "disable_cache": true,
+                "rewrite_ttl": 0
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "remote",
+                "disable_cache": true,
+                "rewrite_ttl": 0
+            }
         ],
-        "server": "ddns"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "server": "remote",
-        "rewrite_ttl": 0
-      }
-    ],
-    "final": "local",
-    "independent_cache": true,
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    }
-  },
+        "final": "local",
+        "independent_cache": true,
+        "reverse_mapping": true
+    },
     "inbounds": [
         {
             "tag": "mixed-in",
@@ -125,7 +132,7 @@
         {
             "tag": "♻️ 自动选择",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -160,10 +167,6 @@
         {
             "tag": "DIRECT",
             "type": "direct"
-        },
-        {
-            "type": "block",
-            "tag": "REJECT"
         },
         {
             "tag": "Ⓜ️ 微软服务",
@@ -445,7 +448,7 @@
         {
             "tag": "🇭🇰 香港节点",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -469,7 +472,7 @@
         {
             "tag": "🇹🇼 台湾节点",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -493,7 +496,7 @@
         {
             "tag": "🇯🇵 日本节点",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -517,7 +520,7 @@
         {
             "tag": "🇰🇷 韩国节点",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -541,7 +544,7 @@
         {
             "tag": "🇸🇬 新加坡节点",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -565,7 +568,7 @@
         {
             "tag": "🇺🇸 美国节点",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -589,7 +592,7 @@
         {
             "tag": "🪅 其他自动",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -622,7 +625,7 @@
         {
             "tag": "🤖 智障自动",
             "type": "urltest",
-            "tolerance": 30,
+            "tolerance": 50,
             "outbounds": [
                 "{all}"
             ],
@@ -654,6 +657,7 @@
         }
     ],
     "route": {
+        "final": "🐟 漏网之鱼",
         "rules": [
             {
                 "type": "logical",
@@ -664,18 +668,17 @@
                     },
                     {
                         "port": 53
+                    },
+                    {
+                        "inbound": "dns-in"
                     }
                 ],
                 "outbound": "dns-out"
             },
             {
-                "inbound": "dns-in",
-                "outbound": "dns-out"
-            },
-            {
                 "ip_is_private": true,
                 "outbound": "DIRECT"
-            },
+              },
             {
                 "clash_mode": "Direct",
                 "outbound": "DIRECT"
@@ -683,23 +686,6 @@
             {
                 "clash_mode": "Global",
                 "outbound": "GLOBAL"
-            },
-            {
-                "type": "logical",
-                "mode": "or",
-                "rules": [
-                    {
-                        "port": 853
-                    },
-                    {
-                        "network": "udp",
-                        "port": 443
-                    },
-                    {
-                        "protocol": "stun"
-                    }
-                ],
-                "outbound": "block"
             },
             {
                 "rule_set": [
@@ -754,6 +740,7 @@
                     "others-direct",
                     "category-public-tracker",
                     "tracker",
+                    "private-tracker",
                     "microsoft-cn",
                     "apple-cn",
                     "google-cn",
@@ -798,13 +785,6 @@
                 "download_detour": "DIRECT"
             },
             {
-                "tag": "fakeipfilter",
-                "type": "remote",
-                "format": "source",
-                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/fakeipfilter.json",
-                "download_detour": "DIRECT"
-            },
-            {
                 "tag": "others-direct",
                 "type": "remote",
                 "format": "source",
@@ -823,6 +803,13 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tracker.srs",
+                "download_detour": "DIRECT"
+            },
+            {
+                "tag": "private-tracker",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/bm7/PrivateTracker.srs",
                 "download_detour": "DIRECT"
             },
             {
@@ -1021,8 +1008,6 @@
                 "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
                 "download_detour": "DIRECT"
             }
-        ],
-        "auto_detect_interface": false,
-        "final": "🐟 漏网之鱼"
+        ]
     }
 }
