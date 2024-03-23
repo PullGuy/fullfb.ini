@@ -82,8 +82,7 @@
             }
         ],
         "final": "local",
-        "independent_cache": true,
-        "reverse_mapping": true
+        "independent_cache": true
     },
     "inbounds": [
         {
