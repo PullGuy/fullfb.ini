@@ -734,7 +734,6 @@
             },
             {
                 "rule_set": [
-                    "private",
                     "others-direct",
                     "category-public-tracker",
                     "tracker",
@@ -774,13 +773,6 @@
             }
         ],
         "rule_set": [
-            {
-                "tag": "private",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs",
-                "download_detour": "DIRECT"
-            },
             {
                 "tag": "others-direct",
                 "type": "remote",
