@@ -13,7 +13,7 @@
         },
     "cache_file": {
       "enabled": true,
-      "store_fakeip": false,
+      "store_fakeip": true,
       "store_rdrc": true
     }
     },
@@ -70,32 +70,15 @@
                 "server": "ddns"
             },
             {
-                "rule_set": [
-                    "others-direct",
-                    "category-public-tracker",
-                    "tracker",
-                    "microsoft-cn",
-                    "apple-cn",
-                    "google-cn",
-                    "games-cn",
-                    "cn"
-                ],
-                "server": "local"
-            },
-            {
                 "clash_mode": "Global",
-                "server": "remote",
-                "disable_cache": true,
-                "rewrite_ttl": 1
+                "server": "remote"
             },
             {
                 "query_type": [
                     "A",
                     "AAAA"
                 ],
-                "server": "remote",
-                "disable_cache": true,
-                "rewrite_ttl": 1
+                "server": "remote"
             }
         ],
         "final": "local",
