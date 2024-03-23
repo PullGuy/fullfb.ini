@@ -156,11 +156,7 @@
         {
             "tag": "🚀 手动切换",
             "type": "selector",
-            "outbounds": [
-                "♻️ 自动选择",
-                "DIRECT",
-                "{all}"
-            ],
+            "outbounds": "{all}",
             "filter": [
                 {
                     "action": "exclude",
@@ -599,9 +595,7 @@
             "tag": "🪅 其他自动",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": [
-                "{all}"
-            ],
+            "outbounds": "{all}",
             "filter": [
                 {
                     "action": "exclude",
