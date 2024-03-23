@@ -13,7 +13,7 @@
         },
         "cache_file": {
             "enabled": true,
-            "store_fakeip": false,
+            "store_fakeip": true,
             "store_rdrc": true
         }
     },
@@ -71,18 +71,14 @@
             },
             {
                 "clash_mode": "Global",
-                "server": "remote",
-                "disable_cache": true,
-                "rewrite_ttl": 0
+                "server": "remote"
             },
             {
                 "query_type": [
                     "A",
                     "AAAA"
                 ],
-                "server": "remote",
-                "disable_cache": true,
-                "rewrite_ttl": 0
+                "server": "remote"
             }
         ],
         "final": "local",
