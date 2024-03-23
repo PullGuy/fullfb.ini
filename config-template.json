@@ -12,9 +12,7 @@
             "external_ui_download_detour": "DIRECT"
         },
         "cache_file": {
-            "enabled": true,
-            "store_fakeip": false,
-            "store_rdrc": true
+            "enabled": true
         }
     },
     "dns": {
