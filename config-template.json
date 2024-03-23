@@ -132,7 +132,7 @@
         {
             "tag": "♻️ 自动选择",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -144,8 +144,8 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🚀 手动切换",
@@ -448,7 +448,7 @@
         {
             "tag": "🇭🇰 香港节点",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -466,13 +466,13 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🇹🇼 台湾节点",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -490,13 +490,13 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🇯🇵 日本节点",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -514,13 +514,13 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🇰🇷 韩国节点",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -538,13 +538,13 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🇸🇬 新加坡节点",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -562,13 +562,13 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🇺🇸 美国节点",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -586,13 +586,13 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🪅 其他自动",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -604,8 +604,8 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🈯 其他指定",
@@ -625,7 +625,7 @@
         {
             "tag": "🤖 智障自动",
             "type": "urltest",
-            "tolerance": 50,
+            
             "outbounds": [
                 "{all}"
             ],
@@ -637,8 +637,8 @@
                     ]
                 }
             ],
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": "3m"
+            
+           
         },
         {
             "tag": "🤖 智障指定",
