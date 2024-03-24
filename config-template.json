@@ -97,7 +97,7 @@
             "type": "mixed",
             "listen": "::",
             "listen_port": 7890,
-            "sniff": false
+            "sniff": true
         },
         {
             "tag": "dns-in",
@@ -110,16 +110,14 @@
             "type": "redirect",
             "listen": "::",
             "listen_port": 7892,
-            "sniff": false,
-            "sniff_override_destination": false
+            "sniff": true
         },
         {
             "tag": "tproxy-in",
             "type": "tproxy",
             "listen": "::",
             "listen_port": 7893,
-            "sniff": false,
-            "sniff_override_destination": false
+            "sniff": true
         }
     ],
     "outbounds": [
