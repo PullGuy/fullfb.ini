@@ -76,13 +76,7 @@
             {
                 "rule_set": [
                     "cn",
-                    "google-cn",
-                    "apple-cn",
-                    "microsoft-cn",
-                    "others-direct",
-                    "games-cn",
-                    "tracker",
-                    "category-public-tracker"      
+                    "others-direct"
                 ],
                 "server": "local"
             },
