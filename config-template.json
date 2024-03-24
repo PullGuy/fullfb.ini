@@ -13,7 +13,6 @@
         },
     "cache_file": {
       "enabled": true,
-      "store_fakeip": false,
       "store_rdrc": true
     }
     },
@@ -88,8 +87,7 @@
                 "server": "remote"
             }
         ],
-        "final": "local",
-        "independent_cache": true
+        "final": "local"
     },
     "inbounds": [
         {
