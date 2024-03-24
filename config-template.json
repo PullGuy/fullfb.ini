@@ -62,6 +62,10 @@
                 "server": "local"
             },
             {
+                "clash_mode": "Global",
+                "server": "remote"
+            },
+            {
                 "domain_suffix": [
                     ".myds.me",
                     ".dynv6.net",
@@ -70,8 +74,17 @@
                 "server": "ddns"
             },
             {
-                "clash_mode": "Global",
-                "server": "remote"
+                "rule_set": [
+                    "cn",
+                    "google-cn",
+                    "apple-cn",
+                    "microsoft-cn",
+                    "others-direct",
+                    "games-cn",
+                    "tracker",
+                    "category-public-tracker"      
+                ],
+                "server": "local"
             },
             {
                 "query_type": [
