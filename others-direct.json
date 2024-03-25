@@ -11,6 +11,9 @@
         "hdatmos",
         "aria2"
       ],
+      "domain": [
+        "cn.bing.com"
+      ],
       "domain_suffix": [
         ".lencr.org",
         ".dynv6.com",
