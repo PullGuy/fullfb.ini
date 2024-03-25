@@ -83,7 +83,7 @@
                     "cn",
                     "others-direct"
                 ],
-                "server": "local"
+                "server": "google"
             },
             {
                 "query_type": [
