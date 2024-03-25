@@ -709,6 +709,12 @@
             },
             {
                 "rule_set": [
+                    "others-direct"
+                ],
+                "outbound": "DIRECT"
+            },
+            {
+                "rule_set": [
                     "ai",
                     "notion",
                     "openai"
@@ -755,8 +761,7 @@
                 "outbound": "🔞 18禁"
             },
             {
-                "rule_set": [
-                    "others-direct",
+                "rule_set": [                    
                     "category-public-tracker",
                     "tracker",
                     "microsoft-cn",
