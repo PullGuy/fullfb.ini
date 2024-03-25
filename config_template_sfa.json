@@ -18,7 +18,7 @@
             {
                 "tag": "google",
                 "address": "tls://8.8.8.8",
-                "client_subnet": " 218.22.21.21"
+                "client_subnet": "218.22.21.21"
             },
             {
                 "tag": "local",
