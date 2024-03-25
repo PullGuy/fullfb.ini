@@ -83,7 +83,7 @@
                     "cn",
                     "others-direct"
                 ],
-                "server": "google"
+                "server": "local"
             },
             {
                 "query_type": [
@@ -93,7 +93,7 @@
                 "server": "remote"
             }
         ],
-        "final": "local",
+        "final": "google",
         "independent_cache": true
     },
     "inbounds": [
