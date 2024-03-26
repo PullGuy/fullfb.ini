@@ -96,10 +96,26 @@
     },
     "inbounds": [
         {
+            "tag": "mixed-in",
+            "type": "mixed",
+            "listen": "::",
+            "listen_port": 7890,
+            "sniff": true,
+            "sniff_override_destination": false
+        },
+        {
             "tag": "dns-in",
             "type": "direct",
             "listen": "::",
             "listen_port": 53
+        },
+        {
+            "tag": "redirect-in",
+            "type": "redirect",
+            "listen": "::",
+            "listen_port": 7892,
+            "sniff": true,
+            "sniff_override_destination": false
         },
         {
             "tag": "tproxy-in",
