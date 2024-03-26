@@ -5,7 +5,9 @@
     },
     "experimental": {        
         "cache_file": {
-            "enabled": true
+            "enabled": true,
+            "store_fakeip": false,
+            "store_rdrc": true
         }
     },
     "dns": {
