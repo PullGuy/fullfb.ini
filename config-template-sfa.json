@@ -23,11 +23,6 @@
                 "detour": "DIRECT"
             },
             {
-                "tag": "google",
-                "address": "tls://1.1.1.1",
-                "client_subnet": "218.22.21.21"
-            },
-            {
                 "tag": "ddns",
                 "address": "https://223.6.6.6/dns-query",
                 "detour": "DIRECT",
@@ -74,7 +69,7 @@
                 "server": "remote"
             }
         ],
-        "final": "google",
+        "final": "local",
         "independent_cache": true
     },
     "inbounds": [
