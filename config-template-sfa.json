@@ -44,8 +44,7 @@
                     "ads",
                     "others-ban"
                 ],
-                "server": "ban",
-                "disable_cache": "true"
+                "server": "ban"
             },
             {
                 "domain_suffix": [
