@@ -24,8 +24,7 @@
         "servers": [
             {
                 "tag": "google",
-                "address": "tls://1.1.1.1",
-                "client_subnet": "218.22.21.21"
+                "address": "https://1.1.1.1/dns-query"
             },
             {
                 "tag": "local",
