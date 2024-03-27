@@ -53,7 +53,8 @@
                     "ads",
                     "others-ban"
                 ],
-                "server": "ban"
+                "server": "ban",
+                "disable_cache": "true"
             },
             {
                 "outbound": "any",
