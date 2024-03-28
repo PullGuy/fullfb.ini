@@ -3,7 +3,12 @@
         "level": "info",
         "timestamp": true
     },
-    "experimental": {        
+    "experimental": {
+        "clash_api": {
+            "external_controller": "127.0.0.1:9999",
+            "external_ui": "ui",
+            "secret": "123456"
+        },
         "cache_file": {
             "enabled": true,
             "store_fakeip": true,
