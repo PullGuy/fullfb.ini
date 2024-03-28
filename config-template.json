@@ -25,9 +25,9 @@
         },
         "servers": [
             {
-                "tag": "google",
-                "address": "tls://8.8.8.8",
-                "client_subnet": " 218.22.21.21"
+                "tag": "cloudflare",
+                "address": "https://1.1.1.1/dns-query",
+                "client_subnet": "218.22.21.21"
             },
             {
                 "tag": "local",
@@ -93,7 +93,7 @@
                 "server": "remote"
             }
         ],
-        "final": "google",
+        "final": "cloudflare",
         "independent_cache": true
     },
     "inbounds": [
