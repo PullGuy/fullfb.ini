@@ -82,6 +82,7 @@
                     "others-direct",
                     "category-public-tracker",
                     "tracker",
+                    "bili-cn",
                     "microsoft-cn",
                     "apple-cn",
                     "google-cn",
@@ -756,6 +757,7 @@
                 "rule_set": [                    
                     "category-public-tracker",
                     "tracker",
+                    "bili-cn",
                     "microsoft-cn",
                     "apple-cn",
                     "google-cn",
