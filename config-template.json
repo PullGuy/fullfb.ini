@@ -686,11 +686,7 @@
                     }
                 ],
                 "outbound": "dns-out"
-            },
-            {
-                "ip_is_private": true,
-                "outbound": "DIRECT"
-            },
+            },            
             {
                 "clash_mode": "Direct",
                 "outbound": "DIRECT"
@@ -700,10 +696,7 @@
                 "outbound": "GLOBAL"
             },
             {
-                "rule_set": [
-                    "others-direct",
-                    "others-directIP"
-                ],
+                "rule_set": "others-direct",
                 "outbound": "DIRECT"
             },
             {
@@ -723,10 +716,7 @@
                 "outbound": "👨🏻‍🔬 科研狗"
             },
             {
-                "rule_set": [
-                    "telegram",
-                    "telegramip"
-                ],
+                "rule_set": "telegram",
                 "outbound": "📲 电报消息"
             },
             {
@@ -786,12 +776,24 @@
                 "outbound": "🖕 FuckGFW"
             },
             {
+                "rule_set": "cn",
+                "outbound": "DIRECT"
+            },
+            {
+                "rule_set": "telegramip",
+                "outbound": "📲 电报消息"
+            },
+            {
+                "ip_is_private": true,
+                "outbound": "DIRECT"
+            },            
+            {
                 "rule_set": [
-                    "cn",
+                    "others-directIP",
                     "cnip"
                 ],
                 "outbound": "DIRECT"
-            }
+            }            
         ],
         "rule_set": [
             {
