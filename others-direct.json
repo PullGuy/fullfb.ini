@@ -9,7 +9,8 @@
       ],
       "domain": [
         "cn.bing.com",
-        "getproxy.bzpl.tech"
+        "getproxy.bzpl.tech",
+        "pool.ntp.org"
       ],
       "domain_suffix": [
         "adtidy.org",
