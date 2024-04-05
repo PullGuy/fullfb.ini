@@ -9,8 +9,7 @@
       ],
       "domain": [
         "cn.bing.com",
-        "getproxy.bzpl.tech",
-        "pool.ntp.org"
+        "getproxy.bzpl.tech"
       ],
       "domain_suffix": [
         "adtidy.org",
@@ -36,7 +35,8 @@
         "hdfans.org",        
         "location.services.mozilla.com",
         "lencr.org",
-        "myds.me",        
+        "myds.me",
+        "pool.ntp.org",
         "quickconnect.to",
         "quickconnect.cn",  
         "scholaread.com",
