@@ -3,11 +3,11 @@
   "rules": [
     {
       "domain_suffix": [
-        ".pcmanager.microsoft.com",
-        ".pcmanager.officeplus.cn",
-        ".officeplus.cn",
-        ".scorecardresearch.com",
-        ".nelreports.net"
+        "pcmanager.microsoft.com",
+        "pcmanager.officeplus.cn",
+        "officeplus.cn",
+        "scorecardresearch.com",
+        "nelreports.net"
       ]
     }
   ]
