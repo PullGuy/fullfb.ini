@@ -94,7 +94,7 @@
                 "source_ip_cidr": [
                     "192.168.50.98"
                 ],
-                "server": "cloudflare"
+                "server": "local"
             },
             {
                 "query_type": [
