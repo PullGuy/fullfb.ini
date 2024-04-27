@@ -24,7 +24,8 @@
         "servers": [
             {
                 "tag": "cloudflare",
-                "address": "https://1.1.1.1/dns-query"
+                "address": "https://1.1.1.1/dns-query",
+                "detour": "DIRECT"
             },
             {
                 "tag": "local",
@@ -84,6 +85,7 @@
                     "tracker",
                     "bili-cn",
                     "microsoft-cn",
+                    "onedrive",
                     "apple-cn",
                     "games-cn"
                 ],
@@ -106,34 +108,21 @@
         "final": "cloudflare",
         "independent_cache": true
     },
-    "inbounds": [
-        {
-            "tag": "mixed-in",
-            "type": "mixed",
-            "listen": "::",
-            "listen_port": 7890,
-            "sniff": true,
-            "sniff_override_destination": false
-        },
+    "inbounds": [        
         {
             "tag": "dns-in",
             "type": "direct",
             "listen": "::",
             "listen_port": 53
-        },
-        {
-            "tag": "redirect-in",
-            "type": "redirect",
-            "listen": "::",
-            "listen_port": 7892,
-            "sniff": true,
-            "sniff_override_destination": false
-        },
+        },       
         {
             "tag": "tproxy-in",
             "type": "tproxy",
             "listen": "::",
             "listen_port": 7893,
+            "tcp_fast_open": true,
+            "udp_fragment": true,
+            "tcp_multi_path": false,
             "sniff": true,
             "sniff_override_destination": false
         }
@@ -761,7 +750,10 @@
                 "outbound": "DIRECT"
             },
             {
-                "rule_set": "microsoft",
+                "rule_set": [
+                    "microsoft",
+                    "onedrive"
+                ],
                 "outbound": "Ⓜ️ 微软服务"
             },
             {
@@ -918,6 +910,13 @@
               "format": "binary",
               "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft.srs",
               "download_detour": "DIRECT"
+            },
+            {
+                "tag": "onedrive",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-onedrive.srs",
+                "download_detour": "DIRECT"
             },
             {
               "tag": "apple-cn",
