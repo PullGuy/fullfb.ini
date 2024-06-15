@@ -13,9 +13,7 @@ payload:
 - DOMAIN-SUFFIX,asuscomm.com
 - DOMAIN-SUFFIX,aviationweather.gov
 - DOMAIN-SUFFIX,cloudflareclient.com
-- DOMAIN-SUFFIX,cloudflareclient.com:443
 - DOMAIN-SUFFIX,codeium.com
-- DOMAIN-SUFFIX,codeium.com:443
 - DOMAIN-SUFFIX,darkreader.org
 - DOMAIN-SUFFIX,div.show
 - DOMAIN-SUFFIX,discourse-cdn.com
@@ -40,7 +38,6 @@ payload:
 - DOMAIN-SUFFIX,syncthing.net
 - DOMAIN-SUFFIX,synology.cn
 - DOMAIN-SUFFIX,synology.com
-- DOMAIN-SUFFIX,synology.com:443
 - DOMAIN-SUFFIX,synocommunity.com
 - DOMAIN-SUFFIX,wiki.metacubex.one
 - DOMAIN-SUFFIX,xueanquan.com
