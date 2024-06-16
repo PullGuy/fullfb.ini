@@ -10,21 +10,14 @@
             "secret": "123456"
         },
         "cache_file": {
-            "enabled": true,
-            "store_fakeip": true
+            "enabled": true
         }
     },
     "dns": {
-        "fakeip": {
-            "enabled": true,
-            "inet4_range": "198.18.0.0/15",
-            "inet6_range": "fc00::/18"
-        },
         "servers": [
             {
-                "tag": "cloudflare",
-                "address": "https://1.1.1.1/dns-query",
-                "detour": "DIRECT"
+                "tag": "google",
+                "address": "tls://8.8.8.8"
             },
             {
                 "tag": "local",
@@ -36,10 +29,6 @@
                 "address": "https://223.6.6.6/dns-query",
                 "detour": "DIRECT",
                 "strategy": "ipv6_only"
-            },
-            {
-                "tag": "remote",
-                "address": "fakeip"
             },
             {
                 "tag": "ban",
@@ -66,7 +55,7 @@
             },
             {
                 "clash_mode": "Global",
-                "server": "remote"
+                "server": "google"
             },
             {
                 "domain_suffix": [
@@ -91,29 +80,29 @@
                 "server": "local"
             },
             {
-                "source_ip_cidr": [
-                    "192.168.50.98"
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule-set": "geosite-geolocation-!cn",
+                        "invert": true
+                    },
+                    {
+                        "rule-set": "cnip"
+                    }
                 ],
-                "server": "local"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "remote"
+                "server": "google",
+                "client_subnet": "114.114.114.114/24"
             }
-        ],
-        "final": "cloudflare",
-        "independent_cache": true
+        ]
     },
-    "inbounds": [        
+    "inbounds": [
         {
             "tag": "dns-in",
             "type": "direct",
             "listen": "::",
             "listen_port": 53
-        },       
+        },
         {
             "tag": "tproxy-in",
             "type": "tproxy",
@@ -146,7 +135,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -163,7 +152,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ]
@@ -467,7 +456,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -491,7 +480,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -515,7 +504,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -539,7 +528,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -563,7 +552,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -587,7 +576,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -605,7 +594,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -622,7 +611,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ]
@@ -638,7 +627,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ],
@@ -655,7 +644,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|网站|地址|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|网站|地址|剩余|过期|时间|有效|套餐|官址|限速"
                     ]
                 }
             ]
@@ -679,7 +668,7 @@
                     }
                 ],
                 "outbound": "dns-out"
-            },            
+            },
             {
                 "clash_mode": "Direct",
                 "outbound": "DIRECT"
@@ -737,7 +726,7 @@
                 "outbound": "🔞 18禁"
             },
             {
-                "rule_set": [                    
+                "rule_set": [
                     "category-public-tracker",
                     "tracker",
                     "bili-cn",
@@ -782,133 +771,127 @@
             {
                 "ip_is_private": true,
                 "outbound": "DIRECT"
-            },            
+            },
             {
                 "rule_set": [
                     "others-directIP",
                     "cnip"
                 ],
                 "outbound": "DIRECT"
-            },
-            {
-                "source_ip_cidr": [
-                    "192.168.50.98"
-                ],
-                "outbound": "DIRECT"
             }
         ],
         "rule_set": [
             {
-              "tag": "others-direct",
-              "type": "remote",
-              "format": "source",
-              "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-direct.json",
-              "download_detour": "DIRECT"
+                "tag": "others-direct",
+                "type": "remote",
+                "format": "source",
+                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-direct.json",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "others-directIP",
-              "type": "remote",
-              "format": "source",
-              "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-directIP.json",
-              "download_detour": "DIRECT"
+                "tag": "others-directIP",
+                "type": "remote",
+                "format": "source",
+                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-directIP.json",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "category-public-tracker",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-public-tracker.srs",
-              "download_detour": "DIRECT"
+                "tag": "category-public-tracker",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-public-tracker.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "tracker",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tracker.srs",
-              "download_detour": "DIRECT"
+                "tag": "tracker",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tracker.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "category-ads-all",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-ads-all.srs",
-              "download_detour": "DIRECT"
+                "tag": "category-ads-all",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-ads-all.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "ads",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box/ads.srs",
-              "download_detour": "DIRECT"
+                "tag": "ads",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box/ads.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "others-ban",
-              "type": "remote",
-              "format": "source",
-              "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-ban.json",
-              "download_detour": "DIRECT"
+                "tag": "others-ban",
+                "type": "remote",
+                "format": "source",
+                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/others-ban.json",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "notion",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-notion.srs",
-              "download_detour": "DIRECT"
+                "tag": "notion",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-notion.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "openai",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-openai.srs",
-              "download_detour": "DIRECT"
+                "tag": "openai",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-openai.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "ai",
-              "type": "remote",
-              "format": "source",
-              "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/AI.json",
-              "download_detour": "DIRECT"
+                "tag": "ai",
+                "type": "remote",
+                "format": "source",
+                "url": "https://cdn.jsdelivr.net/gh/CaoKang-David/fullfb.ini@main/AI.json",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "github",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-github.srs",
-              "download_detour": "DIRECT"
+                "tag": "github",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-github.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "scholar",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-scholar-!cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "scholar",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-scholar-!cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "telegram",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-telegram.srs",
-              "download_detour": "DIRECT"
+                "tag": "telegram",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-telegram.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "telegramip",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/telegram.srs",
-              "download_detour": "DIRECT"
+                "tag": "telegramip",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/telegram.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "microsoft-cn",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft@cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "microsoft-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft@cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "microsoft",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft.srs",
-              "download_detour": "DIRECT"
+                "tag": "microsoft",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft.srs",
+                "download_detour": "DIRECT"
             },
             {
                 "tag": "onedrive",
@@ -918,116 +901,128 @@
                 "download_detour": "DIRECT"
             },
             {
-              "tag": "apple-cn",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-apple@cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "apple-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-apple@cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "apple",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-apple.srs",
-              "download_detour": "DIRECT"
+                "tag": "apple",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-apple.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "google-cn",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google@cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "google-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google@cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "google",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google.srs",
-              "download_detour": "DIRECT"
+                "tag": "google",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "youtube",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-youtube.srs",
-              "download_detour": "DIRECT"
+                "tag": "youtube",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-youtube.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "spotify",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-spotify.srs",
-              "download_detour": "DIRECT"
+                "tag": "spotify",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-spotify.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "bili-cn",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bilibili@cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "bili-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bilibili@cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "biliintl",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bilibili@!cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "biliintl",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bilibili@!cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "netflix",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-netflix.srs",
-              "download_detour": "DIRECT"
+                "tag": "netflix",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-netflix.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "disney",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-disney.srs",
-              "download_detour": "DIRECT"
+                "tag": "disney",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-disney.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "games-cn",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "games-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "games",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@!cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "games",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@!cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "porn",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-porn.srs",
-              "download_detour": "DIRECT"
+                "tag": "porn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-porn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "fuckgfw",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/gfw.srs",
-              "download_detour": "DIRECT"
+                "tag": "fuckgfw",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/gfw.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "cn",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-cn.srs",
-              "download_detour": "DIRECT"
+                "tag": "cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-cn.srs",
+                "download_detour": "DIRECT"
             },
             {
-              "tag": "cnip",
-              "type": "remote",
-              "format": "binary",
-              "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geoip@rule-set/geoip-cn.srs",
-              "download_detour": "DIRECT"
+                "type": "remote",
+                "tag": "geosite-geolocation-cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs"
+            },
+            {
+                "type": "remote",
+                "tag": "geosite-geolocation-!cn",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs"
+            },
+            {
+                "tag": "cnip",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geoip@rule-set/geoip-cn.srs",
+                "download_detour": "DIRECT"
             }
         ]
     }
