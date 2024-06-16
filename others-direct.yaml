@@ -10,7 +10,6 @@ payload:
 - DOMAIN-SUFFIX,anti-ad.net
 - DOMAIN-SUFFIX,api.met.no
 - DOMAIN-SUFFIX,api.nn.ci
-- DOMAIN-SUFFIX,aqyz.net
 - DOMAIN-SUFFIX,asuscomm.com
 - DOMAIN-SUFFIX,aviationweather.gov
 - DOMAIN-SUFFIX,cloudflareclient.com
@@ -25,7 +24,6 @@ payload:
 - DOMAIN-SUFFIX,dyndns.org
 - DOMAIN-SUFFIX,dyndns.com
 - DOMAIN-SUFFIX,getproxy.bzpl.tech
-- DOMAIN-SUFFIX,guorn.com
 - DOMAIN-SUFFIX,hdatmos.club
 - DOMAIN-SUFFIX,hdfans.org
 - DOMAIN-SUFFIX,mozilla.com
