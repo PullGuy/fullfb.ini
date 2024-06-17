@@ -10,7 +10,6 @@ payload:
 - DOMAIN-SUFFIX,ai.com
 - DOMAIN-SUFFIX,ai
 - DOMAIN-SUFFIX,auth0.openai.com
-- DOMAIN,a.nel.cloudflare.com
 - DOMAIN-SUFFIX,bing123.com
 - DOMAIN-SUFFIX,bing135.com
 - DOMAIN-SUFFIX,bing4.com
@@ -22,12 +21,10 @@ payload:
 - DOMAIN-SUFFIX,bing.net
 - DOMAIN-SUFFIX,bingapis.com
 - DOMAIN-SUFFIX,bingforbusiness.com
-- DOMAIN-SUFFIX,cdn.auth0.com
 - DOMAIN-SUFFIX,copilot.microsoft.com
 - DOMAIN-SUFFIX,compute-pipe.com 
 - DOMAIN-SUFFIX,civitai.com
 - DOMAIN-KEYWORD,claude
-- DOMAIN,challenges.cloudflare.com
 - DOMAIN-SUFFIX,doubleclick.net
 - DOMAIN-SUFFIX,deepmind.com
 - DOMAIN-SUFFIX,deepmind.google
@@ -47,7 +44,6 @@ payload:
 - DOMAIN-SUFFIX,openaicom.imgix.net
 - DOMAIN-SUFFIX,openaigptguide.com
 - DOMAIN-SUFFIX,openai.nooc.ink
-- DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
 - DOMAIN-SUFFIX,pki.goog
 - DOMAIN-SUFFIX,poe.com
 - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
