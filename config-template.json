@@ -86,6 +86,21 @@
                 "client_subnet": "112.27.80.7/24"
             },
             {
+                "rule_set": [
+                    "geosite-geolocation-!cn",
+                    "ai",
+                    "notion",
+                    "openai",
+                    "github",
+                    "scholar",
+                    "telegram",
+                    "youtube",
+                    "spotify",
+                    "netflix",
+                    "disney",
+                    "porn",
+                    "fuckgfw"
+                ],
                 "query_type": [
                     "A",
                     "AAAA"
