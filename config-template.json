@@ -17,9 +17,11 @@
     "dns": {
         "servers": [
             {
-                "tag": "google",
-                "address": "https://8.8.8.8/dns-query",
-                "detour": "♻️ 自动选择"
+                "tag": "cloudflare",
+                "address": "https://cloudflare-dns.com/dns-query",
+                "detour": "♻️ 自动选择",
+                "client_subnet": "112.27.80.7/24",
+                "address_resolver": "223.5.5.5"
             },
             {
                 "tag": "local",
@@ -55,8 +57,7 @@
             },
             {
                 "clash_mode": "Global",
-                "server": "google",
-                "client_subnet": "114.114.114.114/24"
+                "server": "cloudflare"
             },
             {
                 "domain_suffix": [
@@ -82,7 +83,7 @@
                         "rule_set": "cnip"
                     }
                 ],
-                "server": "google"                
+                "server": "cloudflare"                
             },
             {
                 "rule_set": [
