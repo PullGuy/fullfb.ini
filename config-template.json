@@ -17,15 +17,20 @@
     "dns": {
         "servers": [
             {
+                "tag": "alidns",
+                "address": "223.5.5.5",
+                "detour": "DIRECT"
+            },
+            {
                 "tag": "cloudflare",
                 "address": "https://cloudflare-dns.com/dns-query",
                 "detour": "♻️ 自动选择",
                 "client_subnet": "112.27.80.7/24",
-                "address_resolver": "223.5.5.5"
+                "address_resolver": "alidns"
             },
             {
                 "tag": "local",
-                "address": "https://223.5.5.5/dns-query",
+                "address": "https://dns.alidns.com/dns-query",
                 "detour": "DIRECT"
             },
             {
