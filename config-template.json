@@ -17,21 +17,12 @@
     "dns": {
         "servers": [
             {
-                "tag": "alidns",
-                "address": "223.5.5.5",
-                "detour": "DIRECT"
-            },
-            {
-                "tag": "cloudflare",
-                "address": "https://cloudflare-dns.com/dns-query",
-                "detour": "♻️ 自动选择",
-                "client_subnet": "112.27.80.7/24",
-                "address_resolver": "alidns"
-            },
+                "tag": "google",
+                "address": "https://8.8.8.8/dns-query"
+            },            
             {
                 "tag": "local",
-                "address": "https://dns.alidns.com/dns-query",
-                "address_resolver": "alidns",
+                "address": "https://223.5.5.5/dns-query",
                 "detour": "DIRECT"
             },
             {
@@ -63,7 +54,7 @@
             },
             {
                 "clash_mode": "Global",
-                "server": "cloudflare"
+                "server": "google"
             },
             {
                 "domain_suffix": [
@@ -71,10 +62,24 @@
                     ".dynv6.net",
                     ".asuscomm.com"
                 ],
-                "rule_set": [
-                    "cn",
-                    "geosite-geolocation-cn"
+                "server": "local"
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
                 ],
+                "rule_set": [
+                    "geosite-geolocation-cn",
+                    "cn"
+                    ],
+                "server": "remote"
+            },
+            {
+                "rule_set": [
+                    "geosite-geolocation-cn",
+                    "cn"
+                    ],
                 "server": "local"
             },
             {
@@ -89,24 +94,10 @@
                         "rule_set": "cnip"
                     }
                 ],
-                "server": "cloudflare"                
+                "server": "google",
+                "client_subnet": "114.114.114.114/24"               
             },
             {
-                "rule_set": [
-                    "geosite-geolocation-!cn",
-                    "ai",
-                    "notion",
-                    "openai",
-                    "github",
-                    "scholar",
-                    "telegram",
-                    "youtube",
-                    "spotify",
-                    "netflix",
-                    "disney",
-                    "porn",
-                    "fuckgfw"
-                ],
                 "query_type": [
                     "A",
                     "AAAA"
