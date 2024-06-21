@@ -18,7 +18,8 @@
         "servers": [
             {
                 "tag": "google",
-                "address": "https://8.8.8.8/dns-query"
+                "address": "https://8.8.8.8/dns-query",
+                "client_subnet": "114.114.114.114/24"  
             },            
             {
                 "tag": "local",
@@ -65,17 +66,6 @@
                 "server": "local"
             },
             {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "rule_set": [
-                    "geosite-geolocation-cn",
-                    "cn"
-                    ],
-                "server": "remote"
-            },
-            {
                 "rule_set": [
                     "geosite-geolocation-cn",
                     "cn"
@@ -94,8 +84,7 @@
                         "rule_set": "cnip"
                     }
                 ],
-                "server": "google",
-                "client_subnet": "114.114.114.114/24"               
+                "server": "google"                             
             },
             {
                 "query_type": [
