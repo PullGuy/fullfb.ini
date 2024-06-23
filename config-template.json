@@ -18,13 +18,18 @@
         "servers": [
             {
                 "tag": "google",
-                "address": "https://8.8.8.8/dns-query",
-                "client_subnet": "114.114.114.114/24"  
-            },            
+                "address": "https://8.8.8.8/dns-query"
+            },
             {
                 "tag": "local",
                 "address": "https://223.5.5.5/dns-query",
                 "detour": "DIRECT"
+            },
+            {
+                "tag": "ddns",
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "DIRECT",
+                "strategy": "ipv6_only"
             },
             {
                 "tag": "ban",
@@ -36,15 +41,6 @@
             }
         ],
         "rules": [
-            {
-                "rule_set": [
-                    "ads",
-                    "category-ads-all",
-                    "others-ban"
-                ],
-                "server": "ban",
-                "disable_cache": true
-            },
             {
                 "outbound": "any",
                 "server": "local"
@@ -58,41 +54,63 @@
                 "server": "google"
             },
             {
+                "rule_set": [
+                    "ads",
+                    "category-ads-all",
+                    "others-ban"
+                ],
+                "server": "ban",
+                "disable_cache": true
+            },
+            
+            {
                 "domain_suffix": [
                     ".myds.me",
                     ".dynv6.net",
                     ".asuscomm.com"
                 ],
-                "server": "local"
-            },
-            {
-                "rule_set": [
-                    "geosite-geolocation-cn",
-                    "cn"
-                    ],
-                "server": "local"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "rule_set": "geosite-geolocation-!cn",
-                        "invert": true
-                    },
-                    {
-                        "rule_set": "cnip"
-                    }
-                ],
-                "server": "google"                             
+                "server": "ddns"
             },
             {
                 "query_type": [
-                    "A",
-                    "AAAA"
+                  "A",
+                  "AAAA"
+                ],
+                "rule_set": [
+                  "geosite-geolocation-cn",
+                  "cn"
                 ],
                 "server": "remote"
-            }
+              },
+              {
+                "rule_set": [
+                  "geosite-geolocation-cn",
+                  "cn"
+                ],
+                "server": "local"
+              },   
+              {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                  {
+                    "rule_set": "geosite-geolocation-!cn",
+                    "invert": true
+                  },
+                  {
+                    "rule_set": "cnip"
+                  }
+                ],
+                "server": "google",
+                "client_subnet": "114.114.114.114/24"
+              },
+              {
+                "query_type": [
+                  "A",
+                  "AAAA"
+                ],
+                "server": "remote"
+              }
         ],
         "fakeip": {
             "enabled": true,
@@ -729,251 +747,251 @@
             }
         ],
         "rule_set": [
-            {
-                "tag": "others-direct",
-                "type": "remote",
-                "format": "source",
-                "url": "https://github.com/CaoKang-David/fullfb.ini/blob/main/others-direct.json",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "others-directIP",
-                "type": "remote",
-                "format": "source",
-                "url": "https://github.com/CaoKang-David/fullfb.ini/blob/main/others-directIP.json",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "category-public-tracker",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-category-public-tracker.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "tracker",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/MetaCubeX/meta-rules-dat/blob/sing/geo/geosite/tracker.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "category-ads-all",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-category-ads-all.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "ads",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/DustinWin/ruleset_geodata/blob/sing-box-ruleset/ads.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "others-ban",
-                "type": "remote",
-                "format": "source",
-                "url": "https://github.com/CaoKang-David/fullfb.ini/blob/main/others-ban.json",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "notion",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-notion.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "openai",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-openai.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "ai",
-                "type": "remote",
-                "format": "source",
-                "url": "https://github.com/CaoKang-David/fullfb.ini/blob/main/AI.json",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "github",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-github.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "scholar",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-category-scholar-!cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "telegram",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-telegram.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "telegramip",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/MetaCubeX/meta-rules-dat/blob/sing/geo/geoip/telegram.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "microsoft-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-microsoft@cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "microsoft",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-microsoft.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "onedrive",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-onedrive.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "apple-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-apple@cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "apple",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-apple.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "google-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-google@cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "google",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-google.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "youtube",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-youtube.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "spotify",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-spotify.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "bili-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-bilibili@cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "biliintl",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-bilibili@!cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "netflix",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-netflix.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "disney",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-disney.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "games-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-category-games@cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "games",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-category-games@!cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "porn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-category-porn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "fuckgfw",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/MetaCubeX/meta-rules-dat/blob/sing/geo/geosite/gfw.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "geosite-geolocation-cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-geolocation-cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "geosite-geolocation-!cn",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geosite/blob/rule-set/geosite-geolocation-!cn.srs",
-                "download_detour": "♻️ 自动选择"
-            },
-            {
-                "tag": "cnip",
-                "type": "remote",
-                "format": "binary",
-                "url": "https://github.com/SagerNet/sing-geoip/blob/rule-set/geoip-cn.srs",
-                "download_detour": "♻️ 自动选择"
-            }
-        ]
-    }
+      {
+        "tag": "others-direct",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/PullGuy/fullfb.ini@main/others-direct.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "others-directIP",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/PullGuy/fullfb.ini@main/others-directIP.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "category-public-tracker",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-public-tracker.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "tracker",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/tracker.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-ads-all.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ads",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/ads.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "others-ban",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/PullGuy/fullfb.ini@main/others-ban.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "notion",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-notion.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "openai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-openai.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "ai",
+        "type": "remote",
+        "format": "source",
+        "url": "https://cdn.jsdelivr.net/gh/PullGuy/fullfb.ini@main/AI.json",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "github",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-github.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "scholar",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-scholar-!cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-telegram.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "telegramip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/telegram.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "microsoft-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft@cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "microsoft",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-microsoft.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "onedrive",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-onedrive.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-apple@cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "apple",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-apple.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "google-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google@cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "google",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-google.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "youtube",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-youtube.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "spotify",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-spotify.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "bili-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bilibili@cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "biliintl",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-bilibili@!cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "netflix",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-netflix.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "disney",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-disney.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "games-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "games",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@!cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "porn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-porn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "fuckgfw",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/gfw.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "geosite-geolocation-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-geolocation-cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "DIRECT"
+      },
+      {
+        "tag": "cnip",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geoip@rule-set/geoip-cn.srs",
+        "download_detour": "DIRECT"
+      }
+    ]
+  }
 }
