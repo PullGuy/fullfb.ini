@@ -438,11 +438,9 @@
             "filter": [
                 {
                     "action": "include",
-                    "keywords": "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong"
-                },
-                {
-                    "action": "exclude",
-                    "keywords": "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    "keywords": [
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -461,10 +459,6 @@
                     "keywords": [
                         "台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣"
                     ]
-                },
-                {
-                    "action": "exclude",
-                    "keywords": "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -483,10 +477,6 @@
                     "keywords": [
                         "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan"
                     ]
-                },
-                {
-                    "action": "exclude",
-                    "keywords": "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -505,10 +495,6 @@
                     "keywords": [
                         "韩国|首尔|韩|KR|Korea|🇰🇷"
                     ]
-                },
-                {
-                    "action": "exclude",
-                    "keywords": "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -527,10 +513,6 @@
                     "keywords": [
                         "新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg"
                     ]
-                },
-                {
-                    "action": "exclude",
-                    "keywords": "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -549,10 +531,6 @@
                     "keywords": [
                         "🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥"
                     ]
-                },
-                {
-                    "action": "exclude",
-                    "keywords": "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -569,7 +547,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥"
                     ]
                 }
             ],
@@ -586,7 +564,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥"
                     ]
                 }
             ]
@@ -602,7 +580,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣"
                     ]
                 }
             ],
@@ -619,7 +597,7 @@
                 {
                     "action": "exclude",
                     "keywords": [
-                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣"
                     ]
                 }
             ]
