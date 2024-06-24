@@ -715,10 +715,6 @@
                 "outbound": "📢 Google服务"
             },
             {
-                "rule_set": "games",
-                "outbound": "🎮 肥宅快乐"
-            },
-            {
                 "rule_set": "fuckgfw",
                 "outbound": "🖕 FuckGFW"
             },
@@ -939,13 +935,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@cn.srs",
-        "download_detour": "DIRECT"
-      },
-      {
-        "tag": "games",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@!cn.srs",
         "download_detour": "DIRECT"
       },
       {

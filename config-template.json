@@ -18,7 +18,8 @@
         "servers": [
             {
                 "tag": "google",
-                "address": "https://8.8.8.8/dns-query"
+                "address": "https://8.8.8.8/dns-query",
+                "detour": "♻️ 自动选择"
             },
             {
                 "tag": "local",
@@ -378,23 +379,6 @@
             ]
         },
         {
-            "tag": "🎮 肥宅快乐",
-            "type": "selector",
-            "outbounds": [
-                "♻️ 自动选择",
-                "🇭🇰 香港节点",
-                "🇨🇳 台湾节点",
-                "🇯🇵 日本节点",
-                "🇰🇷 韩国节点",
-                "🇸🇬 新加坡节点",
-                "🇺🇸 美国节点",
-                "🪅 其他自动",
-                "🈯 其他指定",
-                "🚀 手动切换",
-                "DIRECT"
-            ]
-        },
-        {
             "tag": "🖕 FuckGFW",
             "type": "selector",
             "outbounds": [
@@ -719,10 +703,6 @@
                 "outbound": "📢 Google服务"
             },
             {
-                "rule_set": "games",
-                "outbound": "🎮 肥宅快乐"
-            },
-            {
                 "rule_set": "fuckgfw",
                 "outbound": "🖕 FuckGFW"
             },
@@ -941,13 +921,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@cn.srs",
-        "download_detour": "DIRECT"
-      },
-      {
-        "tag": "games",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-games@!cn.srs",
         "download_detour": "DIRECT"
       },
       {
