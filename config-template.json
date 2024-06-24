@@ -150,14 +150,14 @@
             "tag": "♻️ 自动选择",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": "{all}",
+            "outbounds": ["{all}"],
             "url": "https://www.gstatic.com/generate_204",
             "interval": "3m"
         },
         {
             "tag": "🚀 手动切换",
             "type": "selector",
-            "outbounds": "{all}"
+            "outbounds": ["{all}"]
         },
         {
             "tag": "DIRECT",
