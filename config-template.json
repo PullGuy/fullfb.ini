@@ -77,17 +77,11 @@
                   "A",
                   "AAAA"
                 ],
-                "rule_set": [
-                  "geosite-geolocation-cn",
-                  "cn"
-                ],
-                "server": "remote"
+                "rule_set": "geosite-geolocation-cn",
+                 "server": "remote"
               },
               {
-                "rule_set": [
-                  "geosite-geolocation-cn",
-                  "cn"
-                ],
+                "rule_set": "geosite-geolocation-cn",
                 "server": "local"
               },   
               {
@@ -707,7 +701,7 @@
                 "outbound": "🖕 FuckGFW"
             },
             {
-                "rule_set": "cn",
+                "rule_set": "geosite-geolocation-cn",
                 "outbound": "DIRECT"
             },
             {
@@ -906,12 +900,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gfw.srs"
-      },
-      {
-        "tag": "cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs"
       },
       {
         "tag": "geosite-geolocation-cn",
