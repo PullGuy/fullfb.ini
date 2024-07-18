@@ -23,12 +23,6 @@
                 "detour": "♻️ 自动选择"
             },
             {
-                "tag": "ddns",
-                "address": "https://223.5.5.5/dns-query",
-                "detour": "DIRECT",
-                "strategy": "ipv6_only"
-            },
-            {
                 "tag": "local",
                 "address": "https://223.5.5.5/dns-query",
                 "detour": "DIRECT"
@@ -63,49 +57,33 @@
                 ],
                 "server": "ban",
                 "disable_cache": true
-            },            
-            {
-                "domain_suffix": [
-                    ".myds.me",
-                    ".dynv6.net",
-                    ".asuscomm.com"
-                ],
-                "server": "ddns"
             },
             {
-                "query_type": [
-                  "A",
-                  "AAAA"
-                ],
-                "rule_set": "geosite-geolocation-cn",
-                 "server": "remote"
-              },
-              {
                 "rule_set": "geosite-geolocation-cn",
                 "server": "local"
-              },   
-              {
+            },
+            {
                 "type": "logical",
                 "mode": "and",
                 "rules": [
-                  {
-                    "rule_set": "geosite-geolocation-!cn",
-                    "invert": true
-                  },
-                  {
-                    "rule_set": "cnip"
-                  }
+                    {
+                        "rule_set": "geosite-geolocation-!cn",
+                        "invert": true
+                    },
+                    {
+                        "rule_set": "cnip"
+                    }
                 ],
                 "server": "google",
                 "client_subnet": "58.243.31.223/24"
-              },
-              {
+            },
+            {
                 "query_type": [
-                  "A",
-                  "AAAA"
+                    "A",
+                    "AAAA"
                 ],
                 "server": "remote"
-              }
+            }
         ],
         "fakeip": {
             "enabled": true,
@@ -144,11 +122,15 @@
             "tag": "♻️ 自动选择",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -157,11 +139,15 @@
         {
             "tag": "🚀 手动切换",
             "type": "selector",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ]
         },
@@ -434,15 +420,21 @@
             "tag": "🇭🇰 香港节点",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "include",
-                    "keywords": ["🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong"]
+                    "keywords": [
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong"
+                    ]
                 },
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -452,15 +444,21 @@
             "tag": "🇨🇳 台湾节点",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "include",
-                    "keywords": ["台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣"]              
+                    "keywords": [
+                        "台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣"
+                    ]
                 },
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -470,15 +468,21 @@
             "tag": "🇯🇵 日本节点",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "include",
-                    "keywords": ["日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan"]
+                    "keywords": [
+                        "日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan"
+                    ]
                 },
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -488,15 +492,21 @@
             "tag": "🇰🇷 韩国节点",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "include",
-                    "keywords": ["韩国|首尔|韩|KR|Korea|🇰🇷"]
+                    "keywords": [
+                        "韩国|首尔|韩|KR|Korea|🇰🇷"
+                    ]
                 },
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -506,15 +516,21 @@
             "tag": "🇸🇬 新加坡节点",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "include",
-                    "keywords": ["新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg"]
+                    "keywords": [
+                        "新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg"
+                    ]
                 },
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -524,15 +540,21 @@
             "tag": "🇺🇸 美国节点",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "include",
-                    "keywords": ["🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥"]
+                    "keywords": [
+                        "🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥"
+                    ]
                 },
                 {
                     "action": "exclude",
-                    "keywords": ["网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -542,11 +564,15 @@
             "tag": "🪅 其他自动",
             "type": "urltest",
             "tolerance": 50,
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "exclude",
-                    "keywords": ["🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ],
             "url": "https://www.gstatic.com/generate_204",
@@ -555,11 +581,15 @@
         {
             "tag": "🈯 其他指定",
             "type": "selector",
-            "outbounds": ["{all}"],
+            "outbounds": [
+                "{all}"
+            ],
             "filter": [
                 {
                     "action": "exclude",
-                    "keywords": ["🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"]
+                    "keywords": [
+                        "🇭🇰|HK|hk|香港|港|HongKong|hong kong|hongkong|台|新北|彰化|TW|Taiwan|🇹🇼|tw|台湾|臺灣|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|jp|Japan|韩国|首尔|韩|KR|Korea|🇰🇷|新加坡|坡|狮|狮城|SG|Singapore|🇸🇬|sg|🇺🇸|US|us|美国|unitedstates|united states|american|america|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|网站|地址|限速|剩余|过期|时间|有效|套餐|官址"
+                    ]
                 }
             ]
         },
@@ -720,205 +750,205 @@
                 "outbound": "DIRECT"
             }
         ],
-       "rule_set": [
-      {
-        "tag": "others-direct",
-        "type": "remote",
-        "format": "source",
-        "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/others-direct.json"
-      },
-      {
-        "tag": "others-directIP",
-        "type": "remote",
-        "format": "source",
-        "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/others-directIP.json"
-      },
-      {
-        "tag": "category-public-tracker",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-public-tracker.srs"
-      },
-      {
-        "tag": "tracker",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tracker.srs"
-      },
-      {
-        "tag": "category-ads-all",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
-      },
-      {
-        "tag": "ads",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/sing-box-ruleset/ads.srs"
-      },
-      {
-        "tag": "others-ban",
-        "type": "remote",
-        "format": "source",
-        "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/others-ban.json"
-      },
-      {
-        "tag": "notion",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-notion.srs"
-      },
-      {
-        "tag": "openai",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs"
-      },
-      {
-        "tag": "ai",
-        "type": "remote",
-        "format": "source",
-        "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/AI.json"
-      },
-      {
-        "tag": "github",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
-      },
-      {
-        "tag": "scholar",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-scholar-!cn.srs"
-      },
-      {
-        "tag": "telegram",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs"
-      },
-      {
-        "tag": "telegramip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"
-      },
-      {
-        "tag": "microsoft-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-microsoft@cn.srs"
-      },
-      {
-        "tag": "microsoft",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs"
-      },
-      {
-        "tag": "onedrive",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-onedrive.srs"
-      },
-      {
-        "tag": "apple-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple@cn.srs"
-      },
-      {
-        "tag": "apple",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple.srs"
-      },
-      {
-        "tag": "google-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google@cn.srs"
-      },
-      {
-        "tag": "google",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
-      },
-      {
-        "tag": "youtube",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
-      },
-      {
-        "tag": "spotify",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-spotify.srs"
-      },
-      {
-        "tag": "bili-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili@cn.srs"
-      },
-      {
-        "tag": "biliintl",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili@!cn.srs"
-      },
-      {
-        "tag": "netflix",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
-      },
-      {
-        "tag": "disney",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-disney.srs"
-      },
-      {
-        "tag": "games-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-games@cn.srs"
-      },
-      {
-        "tag": "porn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-porn.srs"
-      },
-      {
-        "tag": "fuckgfw",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gfw.srs"
-      },
-      {
-        "tag": "geosite-geolocation-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs"
-      },
-      {
-        "tag": "geosite-geolocation-!cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs"
-      },
-      {
-        "tag": "cnip",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
-      }
-    ]
-  }
+        "rule_set": [
+            {
+                "tag": "others-direct",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/others-direct.json"
+            },
+            {
+                "tag": "others-directIP",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/others-directIP.json"
+            },
+            {
+                "tag": "category-public-tracker",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-public-tracker.srs"
+            },
+            {
+                "tag": "tracker",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tracker.srs"
+            },
+            {
+                "tag": "category-ads-all",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-ads-all.srs"
+            },
+            {
+                "tag": "ads",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/sing-box-ruleset/ads.srs"
+            },
+            {
+                "tag": "others-ban",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/others-ban.json"
+            },
+            {
+                "tag": "notion",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-notion.srs"
+            },
+            {
+                "tag": "openai",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs"
+            },
+            {
+                "tag": "ai",
+                "type": "remote",
+                "format": "source",
+                "url": "https://raw.githubusercontent.com/PullGuy/fullfb.ini/main/AI.json"
+            },
+            {
+                "tag": "github",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs"
+            },
+            {
+                "tag": "scholar",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-scholar-!cn.srs"
+            },
+            {
+                "tag": "telegram",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-telegram.srs"
+            },
+            {
+                "tag": "telegramip",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"
+            },
+            {
+                "tag": "microsoft-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-microsoft@cn.srs"
+            },
+            {
+                "tag": "microsoft",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-microsoft.srs"
+            },
+            {
+                "tag": "onedrive",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-onedrive.srs"
+            },
+            {
+                "tag": "apple-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple@cn.srs"
+            },
+            {
+                "tag": "apple",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple.srs"
+            },
+            {
+                "tag": "google-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google@cn.srs"
+            },
+            {
+                "tag": "google",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
+            },
+            {
+                "tag": "youtube",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs"
+            },
+            {
+                "tag": "spotify",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-spotify.srs"
+            },
+            {
+                "tag": "bili-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili@cn.srs"
+            },
+            {
+                "tag": "biliintl",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili@!cn.srs"
+            },
+            {
+                "tag": "netflix",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-netflix.srs"
+            },
+            {
+                "tag": "disney",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-disney.srs"
+            },
+            {
+                "tag": "games-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-games@cn.srs"
+            },
+            {
+                "tag": "porn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-category-porn.srs"
+            },
+            {
+                "tag": "fuckgfw",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/gfw.srs"
+            },
+            {
+                "tag": "geosite-geolocation-cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-cn.srs"
+            },
+            {
+                "tag": "geosite-geolocation-!cn",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs"
+            },
+            {
+                "tag": "cnip",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"
+            }
+        ]
+    }
 }
