@@ -5,7 +5,7 @@
     },
     "experimental": {
         "clash_api": {
-            "external_controller": "0.0.0.0:9999",
+            "external_controller": "127.0.0.1:9999",
             "external_ui": "ui",
             "secret": "123456"
         },
@@ -94,12 +94,6 @@
     },
     "inbounds": [
         {
-            "tag": "dns-in",
-            "type": "direct",
-            "listen": "::",
-            "listen_port": 53
-        },
-        {
             "type": "tun",
             "tag": "tun-in",
             "address": [
@@ -109,7 +103,7 @@
             "mtu": 9000,
             "auto_route": true,
             "strict_route": true,
-            "stack": "gvisor",
+            "stack": "mixed",
             "sniff": true
         }
     ],
