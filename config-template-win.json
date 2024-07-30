@@ -7,6 +7,8 @@
         "clash_api": {
             "external_controller": "127.0.0.1:9999",
             "external_ui": "ui",
+            "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+            "external_ui_download_detour": "♻️ 自动选择",
             "secret": "123456"
         },
         "cache_file": {
@@ -93,6 +95,12 @@
         "independent_cache": true
     },
     "inbounds": [
+        {
+            "tag": "dns-in",
+            "type": "direct",
+            "listen": "::",
+            "listen_port": 53
+        },
         {
             "type": "tun",
             "tag": "tun-in",
@@ -627,6 +635,7 @@
     ],
     "route": {
         "final": "🐟 漏网之鱼",
+        "auto_detect_interface": true,
         "rules": [
             {
                 "type": "logical",
