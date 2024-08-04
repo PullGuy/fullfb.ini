@@ -45,70 +45,61 @@
             }
         ],
         "rules": [
-            {
-                "outbound": "any",
-                "server": "local"
-            },
-            {
-                "clash_mode": "Direct",
-                "server": "local"
-            },
-            {
-                "clash_mode": "Global",
-                "server": "google"
-            },
-            {
-                "rule_set": [
-                    "ads",
-                    "category-ads-all",
-                    "others-ban"
-                ],
-                "server": "ban",
-                "disable_cache": true
-            },
-            {
-                "domain_suffix": [
-                    ".myds.me",
-                    ".dynv6.net",
-                    ".asuscomm.com"
-                ],
-                "server": "ddns"
-            },
-            {
-                "rule_set": "geosite-geolocation-cn",
-                "server": "local"
-            },
-            {
-                "type": "logical",
-                "mode": "and",
-                "rules": [
-                    {
-                        "rule_set": "geosite-geolocation-!cn",
-                        "invert": true
-                    },
-                    {
-                        "rule_set": "cnip"
-                    }
-                ],
-                "server": "google",
-                "client_subnet": "58.243.31.223/24"
-            },
-            {
-                "query_type": [
-                    "A",
-                    "AAAA"
-                ],
-                "server": "remote"
-            }
+      {
+        "outbound": "any",
+        "server": "local"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "local"
+      },
+      {
+        "clash_mode": "Global",
+        "server": "google"
+      },
+      {
+        "rule_set": [
+          "ads",
+          "category-ads-all",
+          "others-ban"
         ],
-        "fakeip": {
-            "enabled": true,
-            "inet4_range": "198.18.0.0/15",
-            "inet6_range": "fc00::/18"
-        },
-        "independent_cache": true,
-        "strategy": "ipv4_only"
+        "server": "ban",
+        "disable_cache": true
+      },
+      {
+        "rule_set": "geosite-geolocation-cn",
+        "server": "local"
+      },
+      {
+        "type": "logical",
+        "mode": "and",
+        "rules": [
+          {
+            "rule_set": "geosite-geolocation-!cn",
+            "invert": true
+          },
+          {
+            "rule_set": "cnip"
+          }
+        ],
+        "server": "google",
+        "client_subnet": "58.243.31.223/24"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "server": "remote"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
     },
+    "independent_cache": true
+  },
     "inbounds": [
         {
             "type": "tun",
