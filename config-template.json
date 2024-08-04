@@ -741,7 +741,10 @@
                 "outbound": "📢 Google服务"
             },
             {
-                "rule_set": "fuckgfw",
+                "rule_set": [
+                    "fuckgfw",
+                    "docker"
+                ],
                 "outbound": "🖕 FuckGFW"
             },
             {
@@ -890,6 +893,12 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
+            },
+            {
+                "tag": "docker",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-docker.srs"
             },
             {
                 "tag": "youtube",

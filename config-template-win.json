@@ -17,7 +17,7 @@
             "store_rdrc": true
         }
     },
-   "dns": {
+    "dns": {
         "servers": [
             {
                 "tag": "google",
@@ -38,62 +38,62 @@
                 "address": "fakeip"
             }
         ],
-       "rules": [
-      {
-        "outbound": "any",
-        "server": "local"
-      },
-      {
-        "clash_mode": "Direct",
-        "server": "local"
-      },
-      {
-        "clash_mode": "Global",
-        "server": "google"
-      },
-      {
-        "rule_set": [
-          "ads",
-          "category-ads-all",
-          "others-ban"
-        ],
-        "server": "ban",
-        "disable_cache": true
-      },
-      {
-        "rule_set": "geosite-geolocation-cn",
-        "server": "local"
-      },
-      {
-        "type": "logical",
-        "mode": "and",
         "rules": [
-          {
-            "rule_set": "geosite-geolocation-!cn",
-            "invert": true
-          },
-          {
-            "rule_set": "cnip"
-          }
+            {
+                "outbound": "any",
+                "server": "local"
+            },
+            {
+                "clash_mode": "Direct",
+                "server": "local"
+            },
+            {
+                "clash_mode": "Global",
+                "server": "google"
+            },
+            {
+                "rule_set": [
+                    "ads",
+                    "category-ads-all",
+                    "others-ban"
+                ],
+                "server": "ban",
+                "disable_cache": true
+            },
+            {
+                "rule_set": "geosite-geolocation-cn",
+                "server": "local"
+            },
+            {
+                "type": "logical",
+                "mode": "and",
+                "rules": [
+                    {
+                        "rule_set": "geosite-geolocation-!cn",
+                        "invert": true
+                    },
+                    {
+                        "rule_set": "cnip"
+                    }
+                ],
+                "server": "google",
+                "client_subnet": "58.243.31.223/24"
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "remote"
+            }
         ],
-        "server": "google",
-        "client_subnet": "58.243.31.223/24"
-      },
-      {
-        "query_type": [
-          "A",
-          "AAAA"
-        ],
-        "server": "remote"
-      }
-    ],
-    "fakeip": {
-      "enabled": true,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
+        "fakeip": {
+            "enabled": true,
+            "inet4_range": "198.18.0.0/15",
+            "inet6_range": "fc00::/18"
+        },
+        "independent_cache": true
     },
-    "independent_cache": true
-  },
     "inbounds": [
         {
             "type": "tun",
@@ -728,7 +728,10 @@
                 "outbound": "📢 Google服务"
             },
             {
-                "rule_set": "fuckgfw",
+                "rule_set": [
+                    "fuckgfw",
+                    "docker"
+                ],
                 "outbound": "🖕 FuckGFW"
             },
             {
@@ -877,6 +880,12 @@
                 "type": "remote",
                 "format": "binary",
                 "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs"
+            },
+            {
+                "tag": "docker",
+                "type": "remote",
+                "format": "binary",
+                "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-docker.srs"
             },
             {
                 "tag": "youtube",
