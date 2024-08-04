@@ -30,6 +30,12 @@
                 "detour": "DIRECT"
             },
             {
+                "tag": "ddns",
+                "address": "https://223.5.5.5/dns-query",
+                "detour": "DIRECT",
+                "strategy": "ipv6_only"
+            },
+            {
                 "tag": "ban",
                 "address": "rcode://success"
             },
@@ -59,6 +65,14 @@
                 ],
                 "server": "ban",
                 "disable_cache": true
+            },
+            {
+                "domain_suffix": [
+                    ".myds.me",
+                    ".dynv6.net",
+                    ".asuscomm.com"
+                ],
+                "server": "ddns"
             },
             {
                 "rule_set": "geosite-geolocation-cn",
@@ -92,15 +106,10 @@
             "inet4_range": "198.18.0.0/15",
             "inet6_range": "fc00::/18"
         },
-        "independent_cache": true
+        "independent_cache": true,
+        "strategy": "ipv4_only"
     },
     "inbounds": [
-        {
-            "tag": "dns-in",
-            "type": "direct",
-            "listen": "::",
-            "listen_port": 53
-        },
         {
             "type": "tun",
             "tag": "tun-in",
@@ -111,7 +120,7 @@
             "mtu": 9000,
             "auto_route": true,
             "strict_route": true,
-            "stack": "mixed",
+            "stack": "gvisor",
             "sniff": true
         }
     ],
