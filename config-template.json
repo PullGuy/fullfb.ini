@@ -28,12 +28,6 @@
                 "detour": "DIRECT"
             },
             {
-                "tag": "ddns",
-                "address": "https://223.5.5.5/dns-query",
-                "detour": "DIRECT",
-                "strategy": "ipv6_only"
-            },
-            {
                 "tag": "ban",
                 "address": "rcode://success"
             },
@@ -70,7 +64,7 @@
                     ".dynv6.net",
                     ".asuscomm.com"
                 ],
-                "server": "ddns"
+                "server": "local"
             },
             {
                 "rule_set": "geosite-geolocation-cn",
