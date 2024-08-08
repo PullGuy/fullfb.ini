@@ -59,14 +59,6 @@
                 "disable_cache": true
             },
             {
-                "domain_suffix": [
-                    ".myds.me",
-                    ".dynv6.net",
-                    ".asuscomm.com"
-                ],
-                "server": "local"
-            },
-            {
                 "rule_set": "geosite-geolocation-cn",
                 "server": "local"
             },
